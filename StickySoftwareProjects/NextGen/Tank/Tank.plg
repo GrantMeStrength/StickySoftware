@@ -1,0 +1,159 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Tank - Win32 (WCE MIPS) Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP7.tmp" with contents
+[
+/nologo /MC /W3 /O2 /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=211 /D "UNICODE" /D "_AFXDLL" /D "_MBCS" /Fp"WMIPSRel/Tank.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp"
+]
+Creating command line "clmips.exe @C:\TEMP\RSP7.tmp" 
+Creating temporary file "C:\TEMP\RSP8.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/Tank.pdb" /machine:MIPS /nodefaultlib:"libc.lib /nodefaultlib:libcd.lib /nodefaultlib:libcmt.lib /nodefaultlib:libcmtd.lib /nodefaultlib:msvcrt.lib /nodefaultlib:msvcrtd.lib" /out:"WMIPSRel/Tank.exe" /subsystem:windowsce,2.11 /STACK:65536,4096 
+".\WMIPSRel\MainFrm.obj"
+".\WMIPSRel\RegStuff.obj"
+".\WMIPSRel\StdAfx.obj"
+".\WMIPSRel\Tank.obj"
+".\WMIPSRel\TankDoc.obj"
+".\WMIPSRel\TankView.obj"
+".\WMIPSRel\ThreeD.obj"
+".\WMIPSRel\Tank.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP8.tmp"
+<h3>Output Window</h3>
+Compiling...
+ThreeD.cpp
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(49) : warning C4305: 'initializing' : truncation from 'const double' to 'const float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(50) : warning C4305: 'initializing' : truncation from 'const double' to 'const float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(400) : warning C4244: 'argument' : conversion from 'unsigned short' to 'char', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(437) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(540) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(541) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(542) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(669) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(670) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(716) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(716) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(794) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(795) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(842) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(842) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(147) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(148) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(149) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(170) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(183) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(183) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(186) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(186) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(192) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(192) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(200) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(201) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(205) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(205) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(210) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(217) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(217) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(217) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(236) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(236) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(254) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(254) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(254) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(254) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(264) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(265) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(303) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\TankClass.h(383) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(96) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(97) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(98) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(120) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(121) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(134) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(134) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(137) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(137) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(143) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(143) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(151) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(152) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(156) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(156) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(161) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(168) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(168) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(168) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(186) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(186) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(213) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\SaucerClass.h(214) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(988) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(988) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1053) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1054) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1074) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1075) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1090) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1091) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1105) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1106) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1134) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1135) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1245) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1248) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1251) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1254) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1522) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1523) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1524) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1525) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1526) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1527) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1528) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1529) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1530) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1531) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1532) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1533) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1534) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1535) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1535) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1679) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1680) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1692) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1692) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1696) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1696) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1715) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1715) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1720) : warning C4244: '-=' : conversion from 'float' to 'short', possible loss of data
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1787) : warning C4551: function call missing argument list
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1837) : warning C4305: 'argument' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\NextGen\Tank\ThreeD.cpp(1838) : warning C4305: 'argument' : truncation from 'const double' to 'float'
+Linking...
+
+
+
+<h3>Results</h3>
+Tank.exe - 0 error(s), 120 warning(s)
+</pre>
+</body>
+</html>

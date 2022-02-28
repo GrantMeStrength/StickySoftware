@@ -1,0 +1,88 @@
+<HTML>
+
+<%
+ 	Set MC = Server.CreateObject("MobileChannels.Utilities")
+    	URL = Request.ServerVariables("URL")
+	Q = Chr(34)
+	Database = MC.ReadRegistry("HKEY_LOCAL_MACHINE", "Explorer\\Database", "ContactsDatabase")
+	Refresh	= ";URL=mctp://buttons"
+	Notify = Q & "DBUPDATE=" & Database & Refresh & Q
+	Response.Write("<META HTTP-EQUIV=NOTIFY content=" & Notify & ">")
+
+	
+
+
+
+%>
+
+<HEAD>
+	<TITLE>WilliesE++</TITLE>
+	<META HTTP-EQUIV="LaunchApp" content="ctlpnl.exe?screen.cpl,0,0">
+</HEAD>
+
+<BODY>
+
+<%
+		
+	TopElem=MC.Locate("Buttons_D")
+	'Refresh	= ";URL=mctp://buttons"
+	'Notify = Q & "PRIVUPDATE=756" & Refresh & Q
+	'Response.Write("<META HTTP-EQUIV=NOTIFY content=" & Notify & ">")
+	dataItems =MC.Data(TopElem, 1)
+	
+
+if (dataItems(0).Value="Yes") then 
+
+	' Display graphic  
+	Response.Write("<center>")  
+	Response.Write("<IMG SRC=http://192.168.0.2/channels/wcelogo.gif>")
+	Response.Write("</center>")
+	Response.Write("<br>")
+
+end if
+
+
+	' Display Buttons
+	Response.Write("<center>")
+
+if (dataItems(1).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://addrbook.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but1.gif" & Q & "></A>")
+end if
+
+if (dataItems(2).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://pmail.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but2.gif" & Q & "></A>")
+end if
+
+if (dataItems(3).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://tasks.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but3.gif" & Q & "></A>")
+end if
+
+if (dataItems(4).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://contacts.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but4.gif" & Q & "></A>")
+end if	
+
+if (dataItems(5).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://notetake.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but5.gif" & Q & "></A>")
+end if
+
+if (dataItems(6).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://calendar.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but6.gif" & Q & "></A>")
+end if
+
+if (dataItems(7).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://voicstub.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but7.gif" & Q & "></A>")
+end if
+
+if (dataItems(8).Value="Yes") then 
+	Response.Write("<A HREF=" & Q & "mcexe://aaview.exe" & Q & "><img src=" & Q & "http://192.168.0.2/channels/but8.gif" & Q & "></A>")
+end if	
+
+	Response.Write("</center>")
+	Response.Write("<br>")
+	Response.Write("<center>")
+	Response.Write("Now Run Sticky Switch Installation!")
+	Response.Write("</CENTER>")
+ 
+%>
+</BODY>
+</HTML>

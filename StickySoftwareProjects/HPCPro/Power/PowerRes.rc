@@ -1,0 +1,135 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG DIALOG DISCARDABLE  0, 0, 185, 137
+STYLE DS_SYSMODAL | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "PowerView v2.1c (C) 1999 Sticky Software"
+FONT 8, "PegasusDialog"
+BEGIN
+    RTEXT           "100%",IDC_STATIC,4,16,23,7
+    RTEXT           "0%",IDC_STATIC,4,74,23,7
+    CTEXT           "Static",IDD_TEXT1,4,91,177,10
+    CTEXT           "Static",IDD_TEXT2,4,102,177,10
+    PUSHBUTTON      "Quit",IDCANCEL,5,121,33,14
+    PUSHBUTTON      "OK",IDOK,147,121,33,14
+    PUSHBUTTON      "Power Settings",IDC_BUTTON1,60,121,66,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON0               ICON    DISCARDABLE     "icon_pro.ico"
+IDI_ICON30              ICON    DISCARDABLE     "icon2.ico"
+IDI_ICON40              ICON    DISCARDABLE     "icon3.ico"
+IDI_ICON00              ICON    DISCARDABLE     "icon4.ico"
+IDI_ICON50              ICON    DISCARDABLE     "icon5.ico"
+IDI_ICON60              ICON    DISCARDABLE     "icon6.ico"
+IDI_ICON70              ICON    DISCARDABLE     "icon7.ico"
+IDI_ICON80              ICON    DISCARDABLE     "icon8.ico"
+IDI_ICON90              ICON    DISCARDABLE     "icon9.ico"
+IDI_ICON10              ICON    DISCARDABLE     "icon10.ico"
+IDI_ICON20              ICON    DISCARDABLE     "icon11.ico"
+IDI_ICON_FULL           ICON    DISCARDABLE     "icon100.ico"
+IDI_ICON_DEFAULT        ICON    DISCARDABLE     "icon_ful.ico"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

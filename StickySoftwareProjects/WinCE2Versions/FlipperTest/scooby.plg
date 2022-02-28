@@ -1,0 +1,35 @@
+--------------------Configuration: scooby - Win32 (WCE MIPS) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\FlipperTest\scooby.dsp", at root.
+Active configuration is Win32 (WCE MIPS) Application (based on Win32 (WCE MIPS) Application)
+
+Project's tools are:
+			"C/C++ Compiler for Mips R4100" with flags "/nologo /MT /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"WMIPSRel/scooby.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /fo"WMIPSRel/scooby.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WMIPSRel/scooby.bsc" "
+			"COFF Linker for Mips R4100" with flags "/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/scooby.pdb" /machine:MIPS /out:"WMIPSRel/scooby.exe" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP239.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /Fo"WMIPSRel/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\FlipperTest\scooby.cpp"
+>
+Creating command line "clmips.exe @C:\TEMP\RSP239.tmp" 
+Creating temp file "C:\TEMP\RSP23A.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/scooby.pdb" /machine:MIPS /out:"WMIPSRel/scooby.exe" /subsystem:windowsce,2.0 
+".\WMIPSRel\MainFrm.obj"
+".\WMIPSRel\scooby.obj"
+".\WMIPSRel\scoobyDoc.obj"
+".\WMIPSRel\scoobyView.obj"
+".\WMIPSRel\StdAfx.obj"
+".\WMIPSRel\scooby.res">
+Creating command line "link.exe @C:\TEMP\RSP23A.tmp" 
+Compiling...
+scooby.cpp
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\FlipperTest\scooby.cpp(259) : warning C4101: 'status' : unreferenced local variable
+Linking...
+Creating command line "pfile.exe COPY  ".\WMIPSRel\scooby.exe" "WCE:scooby.exe"" 
+
+
+
+scooby.exe - 0 error(s), 1 warning(s)

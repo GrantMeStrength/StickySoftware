@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ViewMark1 - Win32 (WCE x86em) Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSPD3.tmp" with contents
+[
+/nologo /MT /W3 /O2 /Ob0 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "STRICT" /D "_WIN32_WCE" /D "UNDER_NT" /D "_WIN32_WCE_EMULATION" /D "UNICODE" /D "_UNICODE" /D "_X86_" /Fo"c:\devstudio\myprojects/" /c 
+"E:\Program Files\DevStudio\MyProjects\PPC\ViewMark1\StarRoutines.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSPD3.tmp" 
+Creating temporary file "C:\TEMP\RSPD4.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /pdb:none /machine:I386 /nodefaultlib:"corelibc.lib" /out:"x86emRel/plop.exe" /windowsce:emulation  
+".\ViewMar2\CEmphemerisDialog.obj"
+".\ViewMar2\CKeyDefineDialog.obj"
+".\ViewMar2\CNameRoutines.obj"
+".\ViewMar2\ConstRoutines.obj"
+".\ViewMar2\DrawSky.obj"
+".\ViewMar2\FindDialog.obj"
+".\ViewMar2\GotoAltAzDialog.obj"
+".\ViewMar2\GotoRaDecDialog.obj"
+".\ViewMar2\Jovian_Dialog.obj"
+".\ViewMar2\Key_Dialog.obj"
+".\ViewMar2\LocationDialog.obj"
+".\ViewMar2\MainFrm.obj"
+".\ViewMar2\MessRoutines.obj"
+".\ViewMar2\RegStuff.obj"
+".\ViewMar2\SettingsDialog.obj"
+"c:\devstudio\myprojects\StarRoutines.obj"
+".\ViewMar2\StarSums.obj"
+".\ViewMar2\StdAfx.obj"
+".\ViewMar2\TimeDateDialog.obj"
+".\ViewMar2\TimeStuff.obj"
+".\ViewMar2\Toolbox_Dialog.obj"
+".\ViewMar2\UpdateDialog2.obj"
+".\ViewMar2\ViewMark1.obj"
+".\ViewMar2\ViewMark1Doc.obj"
+".\ViewMar2\ViewMark1View.obj"
+".\x86emRel\plop.res"
+]
+Creating command line "link.exe @C:\TEMP\RSPD4.tmp"
+<h3>Output Window</h3>
+Compiling...
+StarRoutines.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+plop.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

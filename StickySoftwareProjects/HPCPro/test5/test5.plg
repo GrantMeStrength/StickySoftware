@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: test5 - Win32 (WCE x86em) Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"x86emRel/test5.res" /d UNDER_CE=201 /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=201 /d "Palm-size PC 2.01" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" /d "_AFXDLL" "E:\Program Files\DevStudio\MyProjects\HPCPro\test5\test5.rc"" 
+Creating temporary file "C:\TEMP\RSP48.tmp" with contents
+[
+/nologo /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/test5.pdb" /machine:I386 /out:"x86emRel/test5.exe" /windowsce:emulation 
+".\x86emRel\test5.obj"
+".\x86emRel\StdAfx.obj"
+".\x86emRel\MainFrm.obj"
+".\x86emRel\test5Doc.obj"
+".\x86emRel\test5View.obj"
+".\x86emRel\test5.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP48.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+test5.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,138 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON    DISCARDABLE     "icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TASK_DIALOG DIALOGEX 0, 0, 133, 162
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "FlipperPro v2.1b"
+FONT 8, "PegasusDialog"
+BEGIN
+    CONTROL         "AutoKill",IDC_AUTOKILL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,109,40,10
+    CONTROL         "Startup Sound",IDC_STARTUP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,109,64,10
+    CTEXT           "power",IDD_TEXT2,22,93,31,8
+    CTEXT           "power",IDD_TEXT3,69,93,40,8
+    CTEXT           "memory",IDD_TEXT1,4,41,125,8
+    CTEXT           "(CF card required for Startup Sound)",IDC_STATIC,4,120,
+                    125,8,WS_DISABLED
+    PUSHBUTTON      "Quit Flipper",IDCANCEL2,14,132,48,19
+    PUSHBUTTON      "OK",IDOK,69,132,48,19
+    CTEXT           "Main               Backup",IDC_STATIC,23,65,86,10
+    PUSHBUTTON      "Memory Status",IDC_BUTTON1,38,27,57,11,BS_CENTER | 
+                    BS_VCENTER | NOT WS_TABSTOP
+    PUSHBUTTON      "Power Status",IDC_BUTTON2,38,53,57,11,BS_CENTER | 
+                    BS_VCENTER | NOT WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TASK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "FlipperAnim\\flip1.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "FlipperAnim\\flip2.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "FlipperAnim\\flip3.bmp"
+IDB_BITMAP4             BITMAP  DISCARDABLE     "FlipperAnim\\flip4.bmp"
+IDB_BITMAP5             BITMAP  DISCARDABLE     "FlipperAnim\\flip5.bmp"
+IDB_BITMAP6             BITMAP  DISCARDABLE     "FlipperAnim\\flip6.bmp"
+IDB_BITMAP_BATFULL      BITMAP  DISCARDABLE     "flipperanim\\bmp00002.bmp"
+IDB_BITMAP_BATCRITICAL  BITMAP  DISCARDABLE     "flipperanim\\bmp00001.bmp"
+IDB_BITMAP_BATLOW       BITMAP  DISCARDABLE     "flipperanim\\bitmap_b.bmp"
+IDB_BITMAP_BATDEFAULT   BITMAP  DISCARDABLE     "FlipperAnim\\full.bmp"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,34 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by FlipperResource.rc
+//
+#define IDI_ICON1                       101
+#define IDD_DIALOG                      102
+#define IDI_ICON_100                    113
+#define IDI_ICON_50                     114
+#define IDI_ICON_40                     115
+#define IDI_ICON_30                     116
+#define IDI_ICON_20                     117
+#define IDI_ICON_10                     118
+#define IDI_ICON_60                     119
+#define IDI_ICON_70                     120
+#define IDI_ICON_80                     121
+#define IDI_ICON_90                     122
+#define IDI_ICON_00                     123
+#define IDI_ICON_200                    124
+#define IDC_TASKLIST                    1000
+#define IDC_KILL_BUTTON                 1001
+#define IDD_TEXT1                       1003
+#define IDC_BUTTON1                     1005
+#define IDD_TEXT2                       1006
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        132
+#define _APS_NEXT_COMMAND_VALUE         40001
+#define _APS_NEXT_CONTROL_VALUE         1006
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

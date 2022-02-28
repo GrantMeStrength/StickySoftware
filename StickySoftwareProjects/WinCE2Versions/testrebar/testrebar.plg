@@ -1,0 +1,52 @@
+--------------------Configuration: testrebar - Win32 (WCE x86em) Release--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\testrebar.dsp", at root.
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86em" with flags "/nologo /MT /W3 /GX- /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fp"x86emRel/testrebar.pch" /Yu"stdafx.h" /Fo"x86emRel/" /c "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"x86emRel/testrebar.res" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"x86emRel/testrebar.bsc" "
+			"COFF Linker for 80x86em" with flags "/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/testrebar.pdb" /machine:I386 /out:"x86emRel/testrebar.exe" /windowsce:emulation "
+			"Empfile Utility" with flags "-COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /fo"x86emRel/testrebar.res" /d UNDER_CE=200 /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=200 /d "H/PC Ver. 2.00" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\testrebar.rc"" 
+Creating temp file "C:\TEMP\RSP6B.tmp" with contents </nologo /MT /W3 /GX- /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fp"x86emRel/testrebar.pch" /Yu"stdafx.h" /Fo"x86emRel/" /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\testrebar.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\MainFrm.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\testrebarDoc.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\testrebarView.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP6B.tmp" 
+Creating temp file "C:\TEMP\RSP6C.tmp" with contents </nologo /MT /W3 /GX- /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fp"x86emRel/testrebar.pch" /Yc"stdafx.h" /Fo"x86emRel/" /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\StdAfx.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP6C.tmp" 
+Creating temp file "C:\TEMP\RSP6D.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/testrebar.pdb" /machine:I386 /out:"x86emRel/testrebar.exe" /windowsce:emulation 
+".\x86emRel\testrebar.obj"
+".\x86emRel\StdAfx.obj"
+".\x86emRel\MainFrm.obj"
+".\x86emRel\testrebarDoc.obj"
+".\x86emRel\testrebarView.obj"
+".\x86emRel\testrebar.res">
+Creating command line "link.exe @C:\TEMP\RSP6D.tmp" 
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+testrebar.cpp
+MainFrm.cpp
+testrebarDoc.cpp
+testrebarView.cpp
+Generating Code...
+Linking...
+Creating command line "empfile.exe -COPY  "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\x86emRel\testrebar.exe" "WCE:testrebar.exe"" 
+
+Copying 'C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\x86emRel\testrebar.exe' from NT to 'testrebar.exe' on object store...Done.
+Copying 'C:\Program Files\DevStudio\MyProjects\WinCE2Versions\testrebar\x86emRel\testrebar.exe' from NT to 'C:\Program Files\Windows CE Platform SDK\wce\emul\hpc\testrebar.exe' on NT...Done.
+
+
+
+testrebar.exe - 0 error(s), 0 warning(s)

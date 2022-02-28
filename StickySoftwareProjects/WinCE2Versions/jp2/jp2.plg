@@ -1,0 +1,20 @@
+--------------------Configuration: jp2 - Java Virtual Machine Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\jp2\jp2.dsp", at root.
+Active configuration is Java Virtual Machine Java Project (based on Java Virtual Machine Java Project)
+
+Project's tools are:
+			"Java Compiler" with flags "/O "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP91.tmp" with contents <E:\Program Files\DevStudio\MyProjects\WinCE2Versions\jp2\jp2.java>
+Compiling...
+Microsoft (R) Visual J++ Compiler Version 1.01.7022
+Copyright (C) Microsoft Corp 1996. All rights reserved.
+
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\jp2\jp2.java(52,25) : error J0082: Class 'Dialog' doesn't have a constructor that matches 'Dialog(Panel, String)'
+Error executing jvc.exe.
+
+
+
+jp2 - 1 error(s), 0 warning(s)

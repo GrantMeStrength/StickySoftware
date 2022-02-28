@@ -1,0 +1,197 @@
+--------------------Configuration: ZoneCE - Win32 (WCE x86em) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ZoneCE.dsp", at root.
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86em" with flags "/nologo /MT /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "STRICT" /D "_WIN32_WCE" /D "UNDER_NT" /D "_WIN32_WCE_EMULATION" /D "UNICODE" /D "_UNICODE" /D "_X86_" /Fp"ZoneCE_1/ZoneCE.pch" /Yu"stdafx.h" /Fo"ZoneCE_1/" /QMRWCE /c "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"x86emRel/plop.res" /d "_WIN32_WCE" /d "UNDER_NT" /d "_WIN32_WCE_EMULATION" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags ""
+			"Browser Database Maker" with flags "/nologo /o"ZoneCE_1/ZoneCE.bsc" "
+			"COFF Linker for 80x86em" with flags "/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/plop.pdb" /machine:I386 /out:"x86emRel/plop.exe" /windowsce:emulation /windowsce:convert "
+			"Empfile Utility" with flags "-NOSHELL -COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /fo"x86emRel/plop.res" /d "_WIN32_WCE" /d "UNDER_NT" /d "_WIN32_WCE_EMULATION" /d "UNICODE" /d "NDEBUG" "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ZoneCE.rc"" 
+Creating temp file "C:\TEMP\RSPB6.tmp" with contents </nologo /MT /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "STRICT" /D "_WIN32_WCE" /D "UNDER_NT" /D "_WIN32_WCE_EMULATION" /D "UNICODE" /D "_UNICODE" /D "_X86_" /Fp"ZoneCE_1/ZoneCE.pch" /Yu"stdafx.h" /Fo"ZoneCE_1/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\MainFrm.cpp"
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp"
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ZoneCEDoc.cpp"
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ZoneCEView.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSPB6.tmp" 
+Creating temp file "C:\TEMP\RSPB7.tmp" with contents </nologo /MT /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "STRICT" /D "_WIN32_WCE" /D "UNDER_NT" /D "_WIN32_WCE_EMULATION" /D "UNICODE" /D "_UNICODE" /D "_X86_" /Fo"ZoneCE_1/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\RegStuff.cpp"
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ZoneCE.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSPB7.tmp" 
+Creating temp file "C:\TEMP\RSPB8.tmp" with contents </nologo /MT /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "STRICT" /D "_WIN32_WCE" /D "UNDER_NT" /D "_WIN32_WCE_EMULATION" /D "UNICODE" /D "_UNICODE" /D "_X86_" /Fp"ZoneCE_1/ZoneCE.pch" /Yc"stdafx.h" /Fo"ZoneCE_1/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\StdAfx.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSPB8.tmp" 
+Creating temp file "C:\TEMP\RSPB9.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/plop.pdb" /machine:I386 /out:"x86emRel/plop.exe" /windowsce:emulation /windowsce:convert 
+".\ZoneCE_1\MainFrm.obj"
+".\ZoneCE_1\RegStuff.obj"
+".\ZoneCE_1\StdAfx.obj"
+".\ZoneCE_1\ThreeD.obj"
+".\ZoneCE_1\ZoneCE.obj"
+".\ZoneCE_1\ZoneCEDoc.obj"
+".\ZoneCE_1\ZoneCEView.obj"
+".\x86emRel\plop.res">
+Creating command line "link.exe @C:\TEMP\RSPB9.tmp" 
+Compiling resources...
+Compiling...
+Command line warning D4002 : ignoring unknown option '/QMRWCE'
+StdAfx.cpp
+Compiling...
+Command line warning D4002 : ignoring unknown option '/QMRWCE'
+MainFrm.cpp
+ThreeD.cpp
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(46) : warning C4305: 'initializing' : truncation from 'const double' to 'const float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(47) : warning C4305: 'initializing' : truncation from 'const double' to 'const float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(216) : warning C4244: 'argument' : conversion from 'unsigned short' to 'char', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(274) : warning C4244: 'argument' : conversion from 'unsigned short' to 'char', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(310) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(424) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(425) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(426) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(553) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(554) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(600) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(600) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(678) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(679) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(725) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(725) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(147) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(148) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(149) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(170) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(183) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(183) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(186) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(186) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(192) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(192) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(200) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(201) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(205) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(205) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(210) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(217) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(217) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(217) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(235) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(235) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(235) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(235) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(253) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(253) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(253) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(253) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(263) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(264) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(302) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\TankClass.h(382) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(96) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(97) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(98) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(120) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(121) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(134) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(134) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(137) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(137) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(143) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(143) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(151) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(152) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(156) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(156) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(161) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(168) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(168) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(168) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(169) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(186) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(186) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(186) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(186) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(203) : warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(213) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\SaucerClass.h(214) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(861) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(861) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(861) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(861) : warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(925) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(926) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(946) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(947) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(962) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(963) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(977) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(978) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1006) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1007) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1100) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1103) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1106) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1107) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1109) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1110) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1374) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1375) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1376) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1377) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1378) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1379) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1380) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1381) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1382) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1383) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1384) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1385) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1386) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1387) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1387) : warning C4305: '=' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1557) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1558) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1570) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1570) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1574) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1574) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1593) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1593) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1598) : warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1741) : warning C4305: 'argument' : truncation from 'const double' to 'float'
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\ThreeD.cpp(1742) : warning C4305: 'argument' : truncation from 'const double' to 'float'
+ZoneCEDoc.cpp
+ZoneCEView.cpp
+Generating Code...
+Compiling...
+Command line warning D4002 : ignoring unknown option '/QMRWCE'
+RegStuff.cpp
+ZoneCE.cpp
+Generating Code...
+Linking...
+Converting 4bpp ICON to 2bpp ICON
+Converting 4bpp ICON to 2bpp ICON
+Converting 4bpp BITMAP to 2bpp BITMAP
+Creating command line "empfile.exe -NOSHELL -COPY  "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\x86emRel\plop.exe" "WCE:ZoneCE.exe"" 
+
+Copying 'E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\x86emRel\plop.exe' from NT to 'ZoneCE.exe' on object store...Done.
+Copying 'E:\Program Files\DevStudio\MyProjects\WinCE2Versions\ZoneCEse\x86emRel\plop.exe' from NT to 'C:\Program Files\Windows CE Platform SDK\wce\emul\hpc\ZoneCE.exe' on NT...Done.
+
+
+
+plop.exe - 0 error(s), 131 warning(s)

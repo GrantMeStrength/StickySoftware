@@ -1,0 +1,59 @@
+'DEFDBL A-Zpr1$ = "\           \###.#  ###.#"pr2$ = "\         \#####.#####"
+pr3$ = "\         \#####.###"pi = 4 * ATN(1)tpi = 2 * pitwopi = tpi
+degs = 180 / pirads = pi / 180''   Get the days to J2000
+'   h is UT in decimal hours
+'   FNday only works between 1901 to 2099 - see Meeus chapter 7'
+DEF FNday (y, m, d, h) = 367 * y - 7 * (y + (m + 9) \ 12) \ 4 + 275 * m \ 9 + d - 730531.5 + h / 24
+''   define an inverse sine function'DEF FNasin (x)    c = SQR(1 - x * x)
+    FNasin = ATN(x / c)END DEF'
+'   the function below returns the true integer part,
+'   even for negative numbers'DEF FNipart (x) = SGN(x) * INT(ABS(x))'
+'   the function below returns an angle in the range'   0 to two pi'
+DEF FNrange (x)    b = x / tpi    a = tpi * (b - FNipart(b))
+    IF a < 0 THEN a = tpi + a    FNrange = aEND DEF'CLS
+PRINT "Galilean moons of Jupiter"PRINT "========================="PRINT'
+'    get the date and time from the user'INPUT "   year  : ", y
+INPUT "   month : ", mINPUT "   day   : ", dayINPUT " hour UT : ", h
+INPUT "  minute : ", minsh = h + mins / 60d = FNday(y, m, day, h)'
+'   Find the mean anomaly of the Earth (me)'
+me = FNrange((357.529 + .9856003# * d) * rads)'
+'   Find mean anomaly of Jupiter (mj), corrected for a long
+'   period term in the motion (V)'V = (172.74 + .00111588# * d) * rads
+pj = .329 * SIN(V) * radsmj = FNrange((20.02 + .0830853# * d) * rads + pj)'
+'   Find difference of heliocentric mean longitudes
+'   for Earth and Jupiter, then the correction
+'   for the equations of centre for the two planets'
+'   k gives the corrected elongation of Jupiter wrt'   Earth'
+j = FNrange((66.115 + .9025179# * d) * rads - pj)
+aj = (1.915 * SIN(me) + .02 * SIN(2 * me)) * rads
+bj = (5.555# * SIN(mj) + .168# * SIN(2 * mj)) * radsk = j + aj - bj'
+'   Work out the Earth Sun distance (res), the Jupiter Sun
+'   distance (rjs) and the Earth Jupiter distance (rej)'
+res = 1.00014 - .01671 * COS(me) - .00014 * COS(2 * me)
+rjs = 5.20872 - .25208 * COS(mj) - .00611 * COS(2 * mj)
+rej = SQR(res ^ 2 + rjs ^ 2 - 2 * res * rjs * COS(k))''   find phi'
+phi = FNasin(res / rej * SIN(k))''   Find the elongations for each moon'
+dd = d - rej / 173  'light travel time correction
+u1 = FNrange((163.8067 + 203.4058643# * dd) * rads + phi - bj)
+u2 = FNrange((358.4108 + 101.2916334# * dd) * rads + phi - bj)
+u3 = FNrange((5.7129 + 50.2345179# * dd) * rads + phi - bj)
+u4 = FNrange((224.8151 + 21.4879801# * dd) * rads + phi - bj)'
+'   Now find the G and H constants, which are related to the
+'   eccentricity ofthe orbits of satellites III and IV'
+Gj = FNrange((331.18 + 50.310482# * dd) * rads)
+Hj = FNrange((87.4 + 21.569231# * dd) * rads)'
+'   Now find the distances from Jupiter for each moon'
+r1 = 5.9073 - .0244 * COS(2 * (u1 - u2))r2 = 9.3991 - .0882 * COS(2 * (u2 - u3))
+r3 = 14.9924 - .0216 * COS(Gj)r4 = 26.3699 - .1935 * COS(Hj)'
+'   Now find the X coordinates for each moon'x1 = r1 * SIN(u1)x2 = r2 * SIN(u2)
+x3 = r3 * SIN(u3)x4 = r4 * SIN(u4)'
+'   Now print out the X coords and the angular sep'n in
+'   minutes of arc. angrad is the radius of Jupiter's disc
+'   in minutes of arc, based on 196.5" dia at 1 a.u.'angrad = 1.6375 / rejPRINT
+PRINT TAB(14); "radii"; TAB(22); "arcmin"
+PRINT USING pr1$; "      Io : "; x1; x1 * angrad
+PRINT USING pr1$; "  Europa : "; x2; x2 * angrad
+PRINT USING pr1$; "Ganymede : "; x3; x3 * angrad
+PRINT USING pr1$; "Callisto : "; x4; x4 * angradPRINT
+PRINT USING pr3$; "distance : "; rej
+PRINT USING pr1$; "jup disc : "; angrad * 2 * 60END

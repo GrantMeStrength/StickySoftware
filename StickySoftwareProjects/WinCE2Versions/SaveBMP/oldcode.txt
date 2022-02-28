@@ -1,0 +1,282 @@
+// SaveBMPView.cpp : implementation of the CSaveBMPView class
+//
+
+#include "stdafx.h"
+#include "SaveBMP.h"
+
+#include "SaveBMPDoc.h"
+#include "SaveBMPView.h"
+
+#include "Windowsx.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CSaveBMPView
+
+IMPLEMENT_DYNCREATE(CSaveBMPView, CView)
+
+BEGIN_MESSAGE_MAP(CSaveBMPView, CView)
+	//{{AFX_MSG_MAP(CSaveBMPView)
+	ON_COMMAND(ID_MENU_SAVEBMP, OnMenuSavebmp)
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CSaveBMPView construction/destruction
+
+CSaveBMPView::CSaveBMPView()
+{
+}
+
+CSaveBMPView::~CSaveBMPView()
+{
+}
+
+BOOL CSaveBMPView::PreCreateWindow(CREATESTRUCT& cs)
+{
+	return CView::PreCreateWindow(cs);
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// CSaveBMPView drawing
+
+void CSaveBMPView::OnDraw(CDC* pDC)
+{
+	CSaveBMPDoc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// CSaveBMPView diagnostics
+
+#ifdef _DEBUG
+void CSaveBMPView::AssertValid() const
+{
+	CView::AssertValid();
+}
+
+void CSaveBMPView::Dump(CDumpContext& dc) const
+{
+	CView::Dump(dc);
+}
+
+CSaveBMPDoc* CSaveBMPView::GetDocument() // non-debug version is inline
+{
+	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(CSaveBMPDoc)));
+	return (CSaveBMPDoc*)m_pDocument;
+}
+#endif //_DEBUG
+
+/////////////////////////////////////////////////////////////////////////////
+// CSaveBMPView message handlers
+
+void CSaveBMPView::OnMenuSavebmp() 
+{
+
+	// Given an application name, load the icon, make it a BMP and save it!
+
+
+	// 1. Get Icon
+
+	SHFILEINFO shfi;
+	HANDLE hIcon;
+
+	TCHAR szFilePathName[]=TEXT("\\Windows\\clock.exe\0");
+
+	memset (&shfi, 0, sizeof (SHFILEINFO));
+	SHGetFileInfo (szFilePathName, 0, &shfi, sizeof (SHFILEINFO), SHGFI_ICON|SHGFI_LARGEICON);
+
+	hIcon = shfi.hIcon;
+
+	// 2. Create bitmap, draw icon into it
+
+	CBitmap icon_bitmap,draw_bitmap;
+	CDC iconDC,drawDC;
+
+	CClientDC dc(this);
+
+	iconDC.CreateCompatibleDC(&dc);
+	icon_bitmap.CreateCompatibleBitmap(&dc,32,32);//CreateBitmap(32,32,8,0,NULL);
+	iconDC.SelectObject(&icon_bitmap);
+	iconDC.FillSolidRect(0,0,32,32,RGB(255,255,255));
+
+	drawDC.CreateCompatibleDC(&dc);
+	draw_bitmap.CreateBitmap(32,32,1,4,NULL);//CreateCompatibleBitmap(&dc,32,32);
+	drawDC.SelectObject(&draw_bitmap);
+	drawDC.FillSolidRect(0,0,32,32,RGB(255,255,255));
+
+	DrawIconEx(iconDC, 0, 0, (struct HICON__*)hIcon, 32, 32, 0, NULL, DI_NORMAL);
+
+
+//	BITMAP test;
+//	draw_bitmap.GetBitmap(&test);
+
+
+//	LPBYTE bits=(unsigned char*)test.bmBits;
+
+	
+
+//	for (int p=0;p<1024;p++)
+//		pixels[p]=*bits;
+
+//	drawDC.BitBlt(0,0,32,32,&iconDC,0,0,SRCCOPY);
+
+	// 3. Test, draw icon into current screen
+
+//	dc.FillSolidRect(0,0,128,128,RGB(0,0,0));
+
+	drawDC.BitBlt(0,0,32,32,&iconDC,0,0,SRCCOPY);
+
+	dc.BitBlt(60,60,32,32,&drawDC,0,0,SRCCOPY);
+
+	dc.BitBlt(0,0,32,32,&iconDC,0,0,SRCCOPY);
+
+	// 4. Now we have the bitmap, well, um...
+
+	CFile file;	
+
+	#define IMAGESIZE 1024
+	#define PALETTESIZE 1024
+
+	#define COLOURS 256
+
+	
+	
+	if( !file.Open(TEXT("plop.bmp"), CFile::modeWrite|CFile::modeCreate) )
+		return;
+	
+//	BITMAPINFO			bmi;
+	BITMAPFILEHEADER	hdr;
+//	LPBITMAPINFOHEADER	lpbi;
+//	HPALETTE			hPal;
+
+//	hPal=(HPALETTE)GetStockObject(DEFAULT_PALETTE);
+
+
+	//typedef struct {
+	//BITMAPINFOHEADER	bih;
+	//RGBQUAD				palette[COLOURS];
+	//} BMP_TYPE;
+
+	LPVOID pixel_pointer;
+	BYTE *byte_pointer;
+
+//	BMP_TYPE bm;
+
+	LPBITMAPINFO lpbi;
+
+static RGBQUAD rgbStd4[] = { 
+							{  0, 0,   0, 0 }, 
+							{128,128,128, 0 }, 
+							{192,192,192, 0 },
+							{255,255,255, 0 }
+};
+	
+
+	DWORD dwSz = sizeof(BITMAPINFOHEADER) + 1024;//(COLOURS * sizeof(RGBQUAD));
+	lpbi = (LPBITMAPINFO) new BYTE[dwSz];
+
+	// Define BITMAPINFOHEADER
+
+	lpbi->bmiHeader.biSize			= sizeof(BITMAPINFOHEADER);	
+	lpbi->bmiHeader.biWidth			= 32;
+	lpbi->bmiHeader.biHeight 		= 32;	
+	lpbi->bmiHeader.biPlanes 		= 1;
+	lpbi->bmiHeader.biBitCount		= 4;
+	lpbi->bmiHeader.biCompression	= BI_RGB;	
+	lpbi->bmiHeader.biSizeImage		= 0;	
+	lpbi->bmiHeader.biXPelsPerMeter	= 0;
+	lpbi->bmiHeader.biYPelsPerMeter	= 0;	
+	lpbi->bmiHeader.biClrUsed		= 0;	
+	lpbi->bmiHeader.biClrImportant	= 0;
+
+
+//	memcpy (lpbi->bmiColors, rgbStd4, sizeof (RGBQUAD) * 256);
+
+	// Define RGBQUAD
+
+	
+if (256!=GetSystemPaletteEntries(dc, 0, 256, (PALETTEENTRY *)lpbi->bmiColors /*(PALETTEENTRY *)&bm.palette)*/))
+		MessageBox(TEXT("1"),TEXT("2"),MB_OK);
+
+	/*
+	bm.palette[0].rgbRed=255;bm.palette[0].rgbGreen=0;bm.palette[0].rgbBlue=0;
+	bm.palette[1].rgbRed=0;bm.palette[1].rgbGreen=255;bm.palette[1].rgbBlue=0;
+	bm.palette[2].rgbRed=0;bm.palette[2].rgbGreen=0;bm.palette[2].rgbBlue=255;
+	*/
+
+	HBITMAP hDIB;
+	
+	hDIB=CreateDIBSection(drawDC,lpbi,/*DIB_PAL_COLORS*/DIB_RGB_COLORS,(void **)&byte_pointer,NULL,0);
+
+	TCHAR mess[100];
+
+	//		byte_pointer=(unsigned char *)pixel_pointer;
+
+//	wsprintf(mess,L"Po:%ld By:%ld",pixel_pointer,byte_pointer);
+//	MessageBox(mess,TEXT("2"),MB_OK);
+
+	/* Extra parts */
+
+	HDC hdc1=CreateCompatibleDC(drawDC);
+	SelectBitmap(hdc1,hDIB);
+//	hdc1.SelectBitmap(hDIB);
+	SelectObject(hdc1,hDIB);
+	BitBlt(hdc1,0,0,32,32,drawDC,0,0,SRCCOPY);
+
+
+	BYTE pixels[1024];
+
+
+//	MessageBox(TEXT("PLOP"),TEXT("2"),MB_OK);
+
+	memset(pixels,1024,0);
+	memcpy(pixels,byte_pointer,1024);
+
+
+	//for (int p=0;p<1024;p++)
+	//{
+	//	pixels[p]=*byte_pointer++;
+	//	if (pixels[p]!=0) MessageBox(TEXT("0"),TEXT("0"),MB_OK);
+	//}
+
+	
+
+//	for (int p=0;p<648;p+=40)
+//	{
+//		wsprintf(mess,L"Pi:%d",pixels[p]);
+//		MessageBox(mess,TEXT("2"),MB_OK);
+//	}
+
+	
+
+	//if (NULL==plop)
+	//	MessageBox(TEXT("3"),TEXT("4"),MB_OK);
+
+
+	// Define BITMAP Header
+
+	hdr.bfType			= ((WORD) ('M' << 8) | 'B');	// is always "BM"
+	hdr.bfSize			= sizeof(hdr)+sizeof(BITMAPINFO)+IMAGESIZE;
+	hdr.bfReserved1 	= 0;
+	hdr.bfReserved2 	= 0;
+	hdr.bfOffBits		= sizeof(hdr)+sizeof(BITMAPINFO) ;
+
+	// Write the file header 
+	file.Write(&hdr, sizeof(hdr));
+
+	// Write the info  
+	file.Write(lpbi, sizeof(BITMAPINFO));
+
+	// Write the pixels  
+	file.Write(pixels,1024);
+
+	file.Close();
+
+
+}

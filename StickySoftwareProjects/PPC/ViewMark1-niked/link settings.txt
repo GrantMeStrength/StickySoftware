@@ -1,0 +1,7 @@
+For NT
+
+/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/ViewMark1.pdb" /machine:I386 /out:"x86emRel/ViewMark1.exe" /windowsce:emulation 
+
+For MIPs
+
+/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:no /pdb:"WMIPSRel/testmips.pdb" /machine:MIPS /out:"WMIPSRel/testmips.exe" /subsystem:windowsce 

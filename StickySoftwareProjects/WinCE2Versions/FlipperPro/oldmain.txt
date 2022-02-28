@@ -1,0 +1,115 @@
+
+
+BOOL CALLBACK dialog_processor(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
+{
+	int i;
+	dialog_open=true;
+
+	switch(wMsg)
+	{
+
+	case WM_KILLFOCUS:
+		{
+			EndDialog(hWnd,0);
+			sndPlaySound(L"Alarm1", SND_FILENAME|SND_ASYNC);
+			SendMessage(globalwindow,WM_DESTROY,0,0);
+			return true;
+			break;
+		}
+
+	case WM_INITDIALOG:
+		{
+			for (i=0;i<textcounter;i++)
+				SendDlgItemMessage(hWnd,IDC_TASKLIST, LB_ADDSTRING,0,(LPARAM)text[i]);
+		
+		return true;
+		break;
+		}
+
+	case WM_COMMAND:
+		switch(LOWORD (wParam))
+		{
+			case IDC_KILL_BUTTON:
+				{
+				MessageBox(hWnd,TEXT("Kill!"),TEXT("FP"),MB_OK);
+				break;
+				}
+			case IDOK:
+				{
+				EndDialog(hWnd,0);
+				return true;
+				break;
+				}
+			//case WM_ACTIVATE: 
+			case IDCANCEL:
+				{
+				EndDialog(hWnd,0);
+				sndPlaySound(L"Close", SND_FILENAME|SND_ASYNC);
+				SendMessage(globalwindow,WM_DESTROY,0,0);
+				return true;
+				break;
+				}
+				
+			case IDC_TASKLIST:
+				{
+					switch (HIWORD(wParam))
+					{
+					case LBN_SELCHANGE:
+						{
+							i=SendDlgItemMessage(hWnd,IDC_TASKLIST,LB_GETCURSEL,0,0);
+							if (tasks[i]!=NULL) SetForegroundWindow(tasks[i]);
+							EndDialog(hWnd,0);
+							return true;
+							break;
+						}
+					}
+				}
+		
+		}
+		
+		case WM_ACTIVATE: 
+			{
+				sndPlaySound(L"Alarm2", SND_FILENAME|SND_ASYNC);
+				break;
+			}
+	}
+
+	return false;
+}
+
+	next=GetWindow(next,GW_HWNDNEXT);
+	//next=FindWindow(L"DesktopExplorerWindow",L"Desktop"); // We have a handle to the desktop !
+
+	if (next!=NULL) 
+	{
+		while((count<10)&&(loop==false))
+		{	
+			id=GetWindowLong(next,GWL_STYLE);
+			if ((id&WS_VISIBLE)!=0) //WS_CAPTION) 
+			{
+				//title bar!
+				SetForegroundWindow(next);
+				//sndPlaySound(L"alarm3", SND_FILENAME|SND_ASYNC);
+				MessageBox(NULL,L"NewWin",L"",MB_OK);
+				loop=true;
+			}
+			else
+			{
+				sndPlaySound(L"alarm3", SND_FILENAME|SND_SYNC);
+				next=GetWindow(next,GW_HWNDNEXT);
+			}
+			count++;
+		}
+	}
+	else
+		MessageBox(NULL,L"plopit",L"",MB_OK);
+
+		
+	if (count==10) 
+	{
+		sndPlaySound(L"alarm1", SND_FILENAME|SND_ASYNC);
+		MessageBox(NULL,L"mope",L"",MB_OK);
+	}
+
+    return 0;
+}

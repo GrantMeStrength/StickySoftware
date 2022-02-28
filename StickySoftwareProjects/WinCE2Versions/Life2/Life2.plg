@@ -1,0 +1,36 @@
+--------------------Configuration: Life2 - Win32 (WCE x86em) Release--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life2\Life2.dsp", at root.
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86em" with flags "/nologo /MT /W3 /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /Fp"x86emRel/Life2.pch" /Yu"stdafx.h" /Fo"x86emRel/" /c "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"x86emRel/Life.res" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" /d "_AFXDLL" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"x86emRel/Life2.bsc" "
+			"COFF Linker for 80x86em" with flags "/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/Life2.pdb" /machine:I386 /out:"x86emRel/Life2.exe" /windowsce:emulation "
+			"Empfile Utility" with flags "-COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP3D.tmp" with contents </nologo /MT /W3 /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /Fp"x86emRel/Life2.pch" /Yu"stdafx.h" /Fo"x86emRel/" /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\LifeView.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP3D.tmp" 
+Creating temp file "C:\TEMP\RSP3E.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/Life2.pdb" /machine:I386 /out:"x86emRel/Life2.exe" /windowsce:emulation 
+".\x86emRel\FileHandler.obj"
+".\x86emRel\GamePlusPlus.obj"
+".\x86emRel\Life.obj"
+".\x86emRel\LifeDoc.obj"
+".\x86emRel\LifeView.obj"
+".\x86emRel\MainFrm.obj"
+".\x86emRel\StdAfx.obj"
+".\x86emRel\Life.res">
+Creating command line "link.exe @C:\TEMP\RSP3E.tmp" 
+Compiling...
+LifeView.cpp
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\LifeView.cpp(147) : error C2660: 'KillTimer' : function does not take 1 parameters
+Error executing cl.exe.
+
+
+
+Life2.exe - 1 error(s), 0 warning(s)

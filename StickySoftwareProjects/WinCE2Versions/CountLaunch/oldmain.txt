@@ -1,0 +1,36 @@
+	next=GetWindow(next,GW_HWNDNEXT);
+	//next=FindWindow(L"DesktopExplorerWindow",L"Desktop"); // We have a handle to the desktop !
+
+	if (next!=NULL) 
+	{
+		while((count<10)&&(loop==false))
+		{	
+			id=GetWindowLong(next,GWL_STYLE);
+			if ((id&WS_VISIBLE)!=0) //WS_CAPTION) 
+			{
+				//title bar!
+				SetForegroundWindow(next);
+				//sndPlaySound(L"alarm3", SND_FILENAME|SND_ASYNC);
+				MessageBox(NULL,L"NewWin",L"",MB_OK);
+				loop=true;
+			}
+			else
+			{
+				sndPlaySound(L"alarm3", SND_FILENAME|SND_SYNC);
+				next=GetWindow(next,GW_HWNDNEXT);
+			}
+			count++;
+		}
+	}
+	else
+		MessageBox(NULL,L"plopit",L"",MB_OK);
+
+		
+	if (count==10) 
+	{
+		sndPlaySound(L"alarm1", SND_FILENAME|SND_ASYNC);
+		MessageBox(NULL,L"mope",L"",MB_OK);
+	}
+
+    return 0;
+}

@@ -1,0 +1,37 @@
+--------------------Configuration: benchmark - Win32 (WCE SH) Release--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\PPC\benchmark\benchmark.dsp", at root.
+Active configuration is Win32 (WCE SH) Application (based on Win32 (WCE SH) Application)
+
+Project's tools are:
+			"C/C++ Compiler for SH" with flags "/nologo /MT /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fo"WCESHRel/" /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /fo"WCESHRel/benchmark.res" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WCESHRel/benchmark.bsc" "
+			"COFF Linker for SH" with flags "/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WCESHRel/benchmarksh3.pdb" /machine:SH3 /out:"WCESHRel/benchmarksh3.exe" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /r /fo"WCESHRel/benchmark.res" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=200 /d _WIN32_WCE=200 /d "H/PC Ver. 2.00" /d "UNICODE" /d "NDEBUG" "C:\Program Files\DevStudio\MyProjects\PPC\benchmark\benchmark.rc"" 
+Creating temp file "C:\TEMP\RSP14.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=200 /D "UNICODE" /Fo"WCESHRel/" /c 
+"C:\Program Files\DevStudio\MyProjects\PPC\benchmark\Tests.cpp"
+>
+Creating command line "shcl.exe @C:\TEMP\RSP14.tmp" 
+Creating temp file "C:\TEMP\RSP15.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WCESHRel/benchmarksh3.pdb" /machine:SH3 /out:"WCESHRel/benchmarksh3.exe" /subsystem:windowsce,2.0 
+".\WCESHRel\benchmark.obj"
+".\WCESHRel\benchmarkDoc.obj"
+".\WCESHRel\benchmarkView.obj"
+".\WCESHRel\MainFrm.obj"
+".\WCESHRel\StdAfx.obj"
+".\WCESHRel\Tests.obj"
+".\WCESHRel\time.obj"
+".\WCESHRel\benchmark.res">
+Creating command line "link.exe @C:\TEMP\RSP15.tmp" 
+Compiling resources...
+Compiling...
+Tests.cpp
+Linking...
+
+
+
+benchmarksh3.exe - 0 error(s), 0 warning(s)

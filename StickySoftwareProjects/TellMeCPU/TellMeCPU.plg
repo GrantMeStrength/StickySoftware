@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TellMeCPU - Win32 (WCE ARM) Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP87.tmp" with contents
+[
+/nologo /MC /W3 /GX- /O2 /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=211 /D "UNICODE" /D "_MBCS" /Fp"WCEARMRel/TellMeCPU.pch" /YX /Fo"WCEARMRel/" /c 
+"E:\Program Files\DevStudio\MyProjects\TellMeCPU\main.cpp"
+]
+Creating command line "clarm.exe @C:\TEMP\RSP87.tmp" 
+Creating temporary file "C:\TEMP\RSP88.tmp" with contents
+[
+coredll.lib commctrl.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /align:"4096" /incremental:no /pdb:"WCEARMRel/TellMeCPU.pdb" /machine:ARM /nodefaultlib:"libc.lib /nodefaultlib:libcd.lib /nodefaultlib:libcmt.lib /nodefaultlib:libcmtd.lib /nodefaultlib:msvcrt.lib /nodefaultlib:msvcrtd.lib" /out:"WCEARMRel/TellMeCPU.exe" /subsystem:windowsce,2.11 /STACK:65536,4096  
+".\WCEARMRel\main.obj"
+]
+Creating command line "link.exe @C:\TEMP\RSP88.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+TellMeCPU.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

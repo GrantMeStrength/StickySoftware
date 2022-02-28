@@ -1,0 +1,200 @@
+	
+
+
+	
+	// Nuke em!
+
+	// Remove all traces of Barney Buttons:
+	// Files, registry and database entries
+
+
+CEPROPVAL Looking;
+HANDLE dh;
+CEOID did=0;
+DWORD dwIndex;
+
+void CleanFiles()
+{
+	// Delete all Files
+
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but1.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but2.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but3.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but4.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but5.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but6.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but7.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but8.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\but9.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butF.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butV.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butP.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butM.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butT.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butX.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\butH.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\barney.gif"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\barney.cdf"));
+	DeleteFile(TEXT("\\Windows\\Temporary Internet Files\\barney.mcs"));
+
+}
+
+void CleanRegistry()
+{
+	// Delete Registry Keys
+
+	hRes=RegOpenKeyEx(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Mobile Channels\\Channels\\Barney",0,KEY_ALL_ACCESS,&hKey);
+	if (hRes==ERROR_SUCCESS) 
+
+	{
+		RegCloseKey(hKey);
+		RegDeleteKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Mobile Channels\\Channels\\Barney");
+
+		// Urgh. How to delete in the range 0 to X?
+		// Let's ASSUME the key is the last in the list
+
+		int i=99;bool carryon=true;
+		do
+		{
+			wsprintf(value,TEXT("Software\\Microsoft\\Active Desktop\\%d\0"),i);
+			hRes=RegOpenKeyEx(HKEY_LOCAL_MACHINE,(LPCTSTR)&value,0,KEY_ALL_ACCESS,&hKey);
+			if ((hRes==ERROR_SUCCESS) || (i<0)) // key exists, so stop..
+				carryon=false;
+			i--;
+		} while (carryon);
+
+
+		if (i>=0)
+		{	
+			RegCloseKey(hKey);
+			RegDeleteKey(HKEY_LOCAL_MACHINE, (LPCTSTR)&value);
+		}
+	}
+}
+
+
+void SeekAndDestroy()
+{
+
+	CEOID found;
+
+	found=CeSeekDatabase(&did,CEDB_SEEK_VALUEFIRSTEQUAL,&Property,&dwIndex);
+	if (found!=0)
+	{
+		// Found so delete
+
+		MessageBox(NULL,L"Found entry for deletion",L"Database",MB_OK);
+		//CeDeleteRecord(&did,found);
+	}
+}
+
+
+void CleanDatabase()
+{
+
+	// Clean out Database
+
+	dh=CeOpenDatabase(&did,TEXT("AatpCache"),0,CEDB_AUTOINCREMENT,NULL);
+
+	if (dh==INVALID_HANDLE_VALUE)
+	{
+
+	// not open
+		MessageBox(NULL,L"Open Failure",L"Database",MB_OK);
+	}
+	else
+	{
+
+		// Go to start of database
+		found=CeSeekDatabase(&did,CEDB_SEEK_BEGINNING,0,&dwIndex);
+
+		
+		// Start Looking
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but1.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but2.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but3.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but4.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but5.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but6.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but7.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but8.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but9.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butF.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butV.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butP.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butM.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butT.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butX.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("butH.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("barney.gif");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("barney.cdf");
+		SeekAndDestroy();
+
+		Looking.propid=MAKELONG(CEVT_LPWSTR,0x42);
+		Looking.val=TEXT("but1.mcs");
+		SeekAndDestroy();
+
+	}
+
+	CloseHandle(dh);
+
+}
+
+		
+
+
+	
+

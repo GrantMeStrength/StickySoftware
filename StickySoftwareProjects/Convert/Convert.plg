@@ -1,0 +1,17 @@
+--------------------Configuration: Convert - Win32 (WCE x86em) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\Convert\Convert.dsp", with item "batcher.cpp"
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+
+Creating temp file "C:\TEMP\RSPE5.tmp" with contents </nologo /MT /W3 /GX- /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fo"x86emRel/" /c 
+"E:\Program Files\DevStudio\MyProjects\Convert\batcher.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSPE5.tmp" 
+Compiling...
+batcher.cpp
+E:\Program Files\DevStudio\MyProjects\Convert\batcher.cpp(127) : error C2143: syntax error : missing ';' before '='
+Error executing cl.exe.
+
+
+
+batcher.obj - 1 error(s), 0 warning(s)

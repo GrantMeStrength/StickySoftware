@@ -1,0 +1,221 @@
+/*
+*                  Sticky Launch
+
+			Launch Utility for StickyButtons
+
+			Works! 27th November 1998
+
+		         	"I am a HERO!"
+
+*
+*/
+
+#include <windows.h>
+
+char program[4][128];
+
+int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,
+                    LPWSTR szCmdLine, int iCmdShow)
+{
+ 
+	// Load the file to get the four user buttons
+
+	int p,q,r;
+	char rawkey[130];
+	HANDLE hFile;
+	DWORD   dwNumberOfBytesRead;
+	hFile = CreateFile(	L"\\Windows\\Temporary Internet Files\\barney.mcs", GENERIC_READ,0,NULL,OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,NULL );
+  
+	if ( hFile!=INVALID_HANDLE_VALUE )
+    {	// It's there, so open it.
+		ReadFile(hFile,&rawkey[0],60,&dwNumberOfBytesRead,NULL);
+		
+		for (p=0;p<4;p++)
+		{
+			r=0;
+			ReadFile(hFile,&rawkey[0],128,&dwNumberOfBytesRead,NULL);
+		
+			for (q=0;q<128;q++)
+			{
+				program[p][q]=rawkey[q];
+				if (rawkey[q]=='!') break;
+			}
+
+			program[p][q]='\0';
+			ReadFile(hFile,&rawkey[0],2,&dwNumberOfBytesRead,NULL);
+
+		}
+
+		CloseHandle(hFile);
+	}
+
+	// Launch the correct application!
+
+	PROCESS_INFORMATION pi;
+	int rc=0;
+	TCHAR scCmdLine[64];
+	TCHAR DecodeLink[256];
+	TCHAR test[256];
+	lstrcpy (scCmdLine, TEXT(""));
+
+	switch (szCmdLine[0])
+		{
+		case '1':rc=CreateProcess(L"addrbook.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break; 
+		case '2':rc=CreateProcess(L"calc.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break;
+		case '3':rc=CreateProcess(L"calendar.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break;
+		case '4':rc=CreateProcess(L"notetake.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break; 
+		case '5':rc=CreateProcess(L"pmail.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break;
+		case '6':rc=CreateProcess(L"tasks.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break;
+		case '7':rc=CreateProcess(L"voicstub.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break; 
+		case '8':rc=CreateProcess(L"aaview.exe",scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break; 
+
+		case 'A':if (SHGetShortcutTarget((LPCTSTR)&program[0],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					//MessageBox(NULL,(LPCTSTR)DecodeLink,L"Status",MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+					
+		case 'B':if (SHGetShortcutTarget((LPCTSTR)&program[1],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					//MessageBox(NULL,(LPCTSTR)DecodeLink,L"Status",MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+
+		case 'C':if (SHGetShortcutTarget((LPCTSTR)&program[2],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					//MessageBox(NULL,(LPCTSTR)DecodeLink,L"Status",MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+
+		case 'D':if (SHGetShortcutTarget((LPCTSTR)&program[3],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					//MessageBox(NULL,(LPCTSTR)DecodeLink,L"Status",MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+
+	
+	//	case 'D':rc=CreateProcess((LPCTSTR)&program[3],scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);break;
+		}
+
+	
+	//SHGetShortcutTarget(L"\\Windows\\Start Menu\\Programs\\PUniverse.lnk",DecodeLink,sizeof(DecodeLink));
+
+	
+	///test[10]='/0';
+	
+	//MessageBox(NULL,(LPCTSTR)test,L"basards",MB_OK);
+	//MessageBox(NULL,(LPCTSTR)DecodeLink,L"Status",MB_OK);
+	//rc=CreateProcess(test,NULL,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+ 
+	//       ||
+	// Works \/
+	//CreateProcess(L"\\Storage Card\\Sticky Software Pocket Universe\\PUniverse.exe",NULL,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+
+	if (rc)
+	{
+		CloseHandle (pi.hThread);
+		CloseHandle (pi.hProcess);
+	}
+
+
+	
+	
+	return 0;
+	
+}
+
+/
+
+/*	
+
+			// User defined commands
+		
+
+		case 'A': if (SHGetShortcutTarget((LPCTSTR)&program[0],DecodeLink,sizeof(DecodeLink)))
+				 {
+					  MessageBox(NULL,(LPCTSTR)&program[0],(LPCTSTR)DecodeLink,MB_OK);
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					MessageBox(NULL,(LPCTSTR)&program[0],(LPCTSTR)DecodeLink,MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+					
+		case 'B':if (SHGetShortcutTarget((LPCTSTR)&program[1],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					MessageBox(NULL,(LPCTSTR)&program[1],(LPCTSTR)DecodeLink,MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+
+		case 'C':if (SHGetShortcutTarget((LPCTSTR)&program[2],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					MessageBox(NULL,(LPCTSTR)DecodeLink,(LPCTSTR)&program[2],MB_OK);
+					 rc=CreateProcess(test,scCmdLine,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+
+		case 'D':if (SHGetShortcutTarget((LPCTSTR)&program[3],DecodeLink,sizeof(DecodeLink)))
+				 {
+					 for (int j=0,i=0;i<256;i++) if (DecodeLink[i]!='\"') test[j++]=DecodeLink[i];
+					//MessageBox(NULL,(LPCTSTR)DecodeLink,L"Status",MB_OK);
+					 rc=CreateProcess(test,DecodeLink,NULL,NULL,false,0,NULL,NULL,NULL,&pi);
+				 }
+			//else MessageBox(NULL,(LPCTSTR)&program[0],L"Moomoo",MB_OK);
+
+					break;
+
+*/	
+
+/*
+	if ( hFile!=INVALID_HANDLE_VALUE )
+    {	// It's there, so open it.
+		ReadFile(hFile,&rawkey[0],64,&dwNumberOfBytesRead,NULL);
+		
+		for (p=0;p<4;p++)
+		{
+			r=0;
+			ReadFile(hFile,&rawkey[0],128,&dwNumberOfBytesRead,NULL);
+		
+			for (q=0;q<128;q++)
+			{
+				program[p][q]=rawkey[q];
+				if (rawkey[q]=='!') break;
+			}
+
+			program[p][q]='\0';
+			ReadFile(hFile,&rawkey[0],2,&dwNumberOfBytesRead,NULL);
+
+		}
+
+		CloseHandle(hFile);
+
+	}
+*///	int p,q,r;
+//	char rawkey[130];
+//	HANDLE hFile;
+//	DWORD   dwNumberOfBytesRead;
+//	hFile = CreateFile(	L"\\Windows\\Temporary Internet Files\\barney.mcs", GENERIC_READ,0,NULL,OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,NULL );

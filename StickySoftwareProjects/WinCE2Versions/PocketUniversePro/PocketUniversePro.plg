@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PocketUniversePro - Win32 (WCE x86em) Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP7D.tmp" with contents
+[
+/nologo /MT /W3 /O2 /D _HPC.UNDER_CE=211 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /D "_MBCS" /Fp"x86emRel/PocketUniversePro.pch" /Yu"stdafx.h" /Fo"x86emRel/" /Zm200 /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\PocketUniversePro\PocketUniverseProView.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSP7D.tmp" 
+Creating temporary file "C:\TEMP\RSP7E.tmp" with contents
+[
+/nologo /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/PocketUniversePro.pdb" /machine:I386 /out:"x86emRel/PocketUniversePro.exe" /windowsce:emulation 
+".\x86emRel\DrawSky.obj"
+".\x86emRel\MainFrm.obj"
+".\x86emRel\PocketUniversePro.obj"
+".\x86emRel\PocketUniverseProDoc.obj"
+".\x86emRel\PocketUniverseProView.obj"
+".\x86emRel\RegStuff.obj"
+".\x86emRel\SMCReal.obj"
+".\x86emRel\StdAfx.obj"
+".\x86emRel\StellarAlgorithms.obj"
+".\x86emRel\TimeDataDialog.obj"
+".\x86emRel\TripleClass.obj"
+".\x86emRel\PocketUniversePro.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP7E.tmp"
+<h3>Output Window</h3>
+Compiling...
+PocketUniverseProView.cpp
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\PocketUniversePro\PocketUniverseProView.cpp(229) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+Linking...
+
+
+
+<h3>Results</h3>
+PocketUniversePro.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

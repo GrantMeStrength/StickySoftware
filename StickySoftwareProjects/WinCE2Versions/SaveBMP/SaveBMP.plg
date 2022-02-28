@@ -1,0 +1,40 @@
+--------------------Configuration: SaveBMP - Win32 (WCE x86em) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\SaveBMP\SaveBMP.dsp", at root.
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86em" with flags "/nologo /MT /W3 /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fp"x86emRel/SaveBMP.pch" /Yu"stdafx.h" /Fo"x86emRel/" /c "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"x86emRel/SaveBMP.res" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"x86emRel/SaveBMP.bsc" "
+			"COFF Linker for 80x86em" with flags "/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/SaveBMP.pdb" /machine:I386 /out:"x86emRel/SaveBMP.exe" /windowsce:emulation "
+			"Empfile Utility" with flags "-COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP8B.tmp" with contents </nologo /MT /W3 /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fp"x86emRel/SaveBMP.pch" /Yu"stdafx.h" /Fo"x86emRel/" /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\SaveBMP\SaveBMPView.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP8B.tmp" 
+Creating temp file "C:\TEMP\RSP8C.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"x86emRel/SaveBMP.pdb" /machine:I386 /out:"x86emRel/SaveBMP.exe" /windowsce:emulation 
+".\x86emRel\MainFrm.obj"
+".\x86emRel\SaveBMP.obj"
+".\x86emRel\SaveBMPDoc.obj"
+".\x86emRel\SaveBMPView.obj"
+".\x86emRel\StdAfx.obj"
+".\x86emRel\SaveBMP.res">
+Creating command line "link.exe @C:\TEMP\RSP8C.tmp" 
+Compiling...
+SaveBMPView.cpp
+C:\Program Files\Windows CE Platform SDK\wce\include\HPC\Windowsx.h(516) : warning C4005: 'Button_GetCheck' : macro redefinition
+C:\Program Files\Windows CE Platform SDK\wce\include\HPC\Windowsx.h(517) : warning C4005: 'Button_SetCheck' : macro redefinition
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\SaveBMP\SaveBMPView.cpp(207) : warning C4101: 'byte_pointer' : unreferenced local variable
+Linking...
+Creating command line "empfile.exe -COPY  "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\SaveBMP\x86emRel\SaveBMP.exe" "WCE:SaveBMP.exe"" 
+
+Copying 'E:\Program Files\DevStudio\MyProjects\WinCE2Versions\SaveBMP\x86emRel\SaveBMP.exe' from NT to 'SaveBMP.exe' on object store...Done.
+Copying 'E:\Program Files\DevStudio\MyProjects\WinCE2Versions\SaveBMP\x86emRel\SaveBMP.exe' from NT to 'C:\Program Files\Windows CE Platform SDK\wce\emul\hpc\SaveBMP.exe' on NT...Done.
+
+
+
+SaveBMP.exe - 0 error(s), 3 warning(s)

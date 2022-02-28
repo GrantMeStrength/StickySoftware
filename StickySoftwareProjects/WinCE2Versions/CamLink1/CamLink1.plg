@@ -1,0 +1,80 @@
+--------------------Configuration: CamLink1 - Win32 (WCE SH) Release--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1.dsp", at root.
+Active configuration is Win32 (WCE SH) Application (based on Win32 (WCE SH) Application)
+
+Project's tools are:
+			"C/C++ Compiler for SH" with flags "/nologo /MT /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_AFXDLL" /Fp"WCESHRel/CamLink1.pch" /Yu"stdafx.h" /Fo"WCESHRel/" /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /fo"WCESHRel/CamLink1.res" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" /d "_AFXDLL" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WCESHRel/CamLink1.bsc" "
+			"COFF Linker for SH" with flags "/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WCESHRel/CamLink1.pdb" /machine:SH3 /out:"WCESHRel/CamLink1.exe" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /r /fo"WCESHRel/CamLink1.res" /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=200 /d _WIN32_WCE=200 /d "H/PC Ver. 2.00" /d "UNICODE" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1.rc"" 
+Creating temp file "C:\TEMP\RSP21.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=200 /D "UNICODE" /D "_AFXDLL" /Fp"WCESHRel/CamLink1.pch" /Yu"stdafx.h" /Fo"WCESHRel/" /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1Doc.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\MainFrm.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\Panel.cpp"
+>
+Creating command line "shcl.exe @C:\TEMP\RSP21.tmp" 
+Creating temp file "C:\TEMP\RSP22.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=200 /D "UNICODE" /D "_AFXDLL" /Fp"WCESHRel/CamLink1.pch" /Yc"stdafx.h" /Fo"WCESHRel/" /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\StdAfx.cpp"
+>
+Creating command line "shcl.exe @C:\TEMP\RSP22.tmp" 
+Creating temp file "C:\TEMP\RSP23.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WCESHRel/CamLink1.pdb" /machine:SH3 /out:"WCESHRel/CamLink1.exe" /subsystem:windowsce,2.0 
+".\WCESHRel\CamLink1.obj"
+".\WCESHRel\CamLink1Doc.obj"
+".\WCESHRel\CamLink1View.obj"
+".\WCESHRel\MainFrm.obj"
+".\WCESHRel\Panel.obj"
+".\WCESHRel\StdAfx.obj"
+".\WCESHRel\CamLink1.res">
+Creating command line "link.exe @C:\TEMP\RSP23.tmp" 
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CamLink1.cpp
+CamLink1Doc.cpp
+CamLink1View.cpp
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(121) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(121) : warning C4309: 'initializing' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(122) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(122) : warning C4309: 'initializing' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(123) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(123) : warning C4309: 'initializing' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(124) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(124) : warning C4309: 'initializing' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(125) : warning C4305: 'initializing' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(125) : warning C4309: 'initializing' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(227) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(227) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(277) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(277) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(300) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(300) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(301) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(301) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(302) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(302) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(303) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(303) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(304) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(304) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(339) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(339) : warning C4309: 'argument' : truncation of constant value
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(351) : warning C4305: 'argument' : truncation from 'const int' to 'char'
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\CamLink1View.cpp(351) : warning C4309: 'argument' : truncation of constant value
+MainFrm.cpp
+Panel.cpp
+C:\Program Files\DevStudio\MyProjects\WinCE2Versions\CamLink1\Panel.cpp(83) : warning C4244: '=' : conversion from 'double' to 'unsigned char', possible loss of data
+Generating Code...
+Linking...
+
+
+
+CamLink1.exe - 0 error(s), 29 warning(s)

@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: atl1 - Win32 (WCE MIPS) Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP32.tmp" with contents
+[
+/nologo /MLd /W3 /GX- /Zi /Od /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /D "_MBCS" /D "_USRDLL" /Fp"WMIPSDbg/atl1.pch" /Yu"stdafx.h" /Fo"WMIPSDbg/" /Fd"WMIPSDbg/" /QMRWCE     /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\atl1\atl1.cpp"
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\atl1\Plop.cpp"
+]
+Creating command line "clmips.exe @C:\TEMP\RSP32.tmp" 
+Creating temporary file "C:\TEMP\RSP33.tmp" with contents
+[
+commctrl.lib coredll.lib /nologo /entry:"_DllMainCRTStartup" /base:"0x10000000" /dll /incremental:yes /pdb:"WMIPSDbg/atl1.pdb" /debug /machine:MIPS /def:".\atl1.def" /out:"WMIPSDbg/atl1.dll" /implib:"WMIPSDbg/atl1.lib" /subsystem:windowsce,2.0 /STACK:65536,4096 
+".\WMIPSDbg\StdAfx.obj"
+".\WMIPSDbg\atl1.obj"
+".\WMIPSDbg\atl1.res"
+".\WMIPSDbg\Plop.obj"
+]
+Creating command line "link.exe @C:\TEMP\RSP33.tmp"
+<h3>Output Window</h3>
+Compiling...
+atl1.cpp
+Plop.cpp
+Generating Code...
+Linking...
+   Creating library WMIPSDbg/atl1.lib and object WMIPSDbg/atl1.exp
+
+
+
+<h3>Results</h3>
+atl1.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

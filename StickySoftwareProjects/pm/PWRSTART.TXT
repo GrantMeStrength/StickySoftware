@@ -1,0 +1,11 @@
+PartitionMagic does not run under Windows NT.  You must boot DOS 
+(or Windows 95's MS-DOS Mode), before running PartitionMagic.  We regret the
+inconvenience this may cause, but PartitionMagic is a new breed of disk
+utility that makes changes to partitions beyond what operating system
+designers thought possible.  We're seeking Microsoft's cooperation in
+eliminating limitations such as this.
+
+To run PartitionMagic from DOS, change to the directory where you installed
+PartitionMagic (typically, C:\PQMAGIC) and type
+
+  PQMAGIC

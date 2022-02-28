@@ -1,0 +1,19 @@
+--------------------Configuration: JP1 - Java Virtual Machine Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\JP1\JP1.DSP", at root.
+Active configuration is Java Virtual Machine Java Project (based on Java Virtual Machine Java Project)
+
+Project's tools are:
+			"Java Compiler" with flags "/O "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP2E.tmp" with contents <E:\Program Files\DevStudio\MyProjects\WinCE2Versions\JP1\jp1source.java>
+Compiling...
+Microsoft (R) Visual J++ Compiler Version 1.01.7022
+Copyright (C) Microsoft Corp 1996. All rights reserved.
+
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\JP1\jp1source.java(5,8) : error J0136: Public class 'HelloFrame' should not be defined in 'E:\Program Files\DevStudio\MyProjects\WinCE2Versions\JP1\jp1source.java'
+
+
+
+JP1 - 1 error(s), 0 warning(s)

@@ -1,0 +1,69 @@
+// TrafficSignal.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (TrafficSignal.tlb) that will become a resource in
+// TrafficSignal.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(385A1EF9-EDB2-11D2-B709-00A0C9B5E577), version(1.0),
+  helpfile("TrafficSignal.hlp"),
+  helpstring("TrafficSignal ActiveX Control module"),
+  control ]
+library TRAFFICSIGNALLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CTrafficSignalCtrl
+
+	[ uuid(385A1EFA-EDB2-11D2-B709-00A0C9B5E577),
+	  helpstring("Dispatch interface for TrafficSignal Control"), hidden ]
+	dispinterface _DTrafficSignal
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CTrafficSignalCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CTrafficSignalCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CTrafficSignalCtrl
+
+	[ uuid(385A1EFB-EDB2-11D2-B709-00A0C9B5E577),
+	  helpstring("Event interface for TrafficSignal Control") ]
+	dispinterface _DTrafficSignalEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CTrafficSignalCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CTrafficSignalCtrl
+
+	[ uuid(385A1EFC-EDB2-11D2-B709-00A0C9B5E577),
+	  helpstring("TrafficSignal Control"), control ]
+	coclass TrafficSignal
+	{
+		[default] dispinterface _DTrafficSignal;
+		[default, source] dispinterface _DTrafficSignalEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

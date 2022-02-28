@@ -1,0 +1,29 @@
+--------------------Configuration: Talking - Win32 (WCE MIPS) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\Talking\Talking.dsp", at root.
+Active configuration is Win32 (WCE MIPS) Application (based on Win32 (WCE MIPS) Application)
+
+Project's tools are:
+			"C/C++ Compiler for Mips R4100" with flags "/nologo /ML /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"WMIPSRel/Talking.pch" /YX /Fo"WMIPSRel/" /QMRWCE /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WMIPSRel/Talking.bsc" "
+			"COFF Linker for Mips R4100" with flags "commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/Speaking.exe.pdb" /machine:MIPS /out:"WMIPSRel/Speaking.exe.MIPS" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSPF7.tmp" with contents </nologo /ML /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /Fp"WMIPSRel/Talking.pch" /YX /Fo"WMIPSRel/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\Talking\Main.cpp"
+>
+Creating command line "clmips.exe @C:\TEMP\RSPF7.tmp" 
+Creating command line "link.exe commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/Speaking.exe.pdb" /machine:MIPS /out:"WMIPSRel/Speaking.exe.MIPS" /subsystem:windowsce,2.0  ".\WMIPSRel\Main.obj"" 
+Compiling...
+Main.cpp
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\Talking\Main.cpp(31) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\Talking\Main.cpp(36) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+E:\Program Files\DevStudio\MyProjects\WinCE2Versions\Talking\Main.cpp(153) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+Linking...
+
+
+
+Speaking.exe.MIPS - 0 error(s), 3 warning(s)

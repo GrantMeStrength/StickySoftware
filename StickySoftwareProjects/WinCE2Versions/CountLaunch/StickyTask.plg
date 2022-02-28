@@ -1,0 +1,33 @@
+--------------------Configuration: StickyTask - Win32 (WCE MIPS) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\CountLaunch\StickyTask.dsp", at root.
+Active configuration is Win32 (WCE MIPS) Application (based on Win32 (WCE MIPS) Application)
+
+Project's tools are:
+			"C/C++ Compiler for Mips R4100" with flags "/nologo /ML /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /FR"WMIPSRel/" /Fp"WMIPSRel/StickyTask.pch" /YX /Fo"WMIPSRel/" /QMRWCE /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /fo"WMIPSRel/FlipperResource.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WMIPSRel/StickyTask.bsc" "
+			"COFF Linker for Mips R4100" with flags "commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/countlaunch.exe.pdb" /machine:MIPS /out:"WMIPSRel/countlaunch.exe.MIPS" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /r /fo"WMIPSRel/FlipperResource.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=200 /d _WIN32_WCE=200 /d "H/PC Ver. 2.00" /d "UNICODE" /d "NDEBUG" "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\CountLaunch\FlipperResource.rc"" 
+Creating temp file "C:\TEMP\RSP4F.tmp" with contents </nologo /ML /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /FR"WMIPSRel/" /Fp"WMIPSRel/StickyTask.pch" /YX /Fo"WMIPSRel/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\CountLaunch\main.cpp"
+>
+Creating command line "clmips.exe @C:\TEMP\RSP4F.tmp" 
+Creating temp file "C:\TEMP\RSP50.tmp" with contents <commctrl.lib coredll.lib /nologo /entry:"WinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/countlaunch.exe.pdb" /machine:MIPS /out:"WMIPSRel/countlaunch.exe.MIPS" /subsystem:windowsce,2.0 
+".\WMIPSRel\main.obj"
+".\WMIPSRel\FlipperResource.res">
+Creating command line "link.exe @C:\TEMP\RSP50.tmp" 
+Compiling resources...
+Compiling...
+main.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"WMIPSRel/StickyTask.bsc"  ".\WMIPSRel\main.sbr"" 
+Creating browse info file...
+
+
+
+countlaunch.exe.MIPS - 0 error(s), 0 warning(s)

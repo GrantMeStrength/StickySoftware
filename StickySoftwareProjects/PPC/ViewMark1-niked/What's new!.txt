@@ -1,0 +1,131 @@
+What's new in 1.1g5
+
+Fixed bug which prevented name of Zodiac constellations
+from being displayed in non-invert screen colours
+
+Fixed bug which prevented multi-instance detection.
+
+Adding Goto.. functions to cover all objects known to
+Pocket Universe by name. Goto Messier intergrated into
+general Goto window. Corrected drop-list box types where
+necessary.
+
+Fixed Save Setting bug which gave warning message.
+
+Sped up star re-draws slightly by optimising math
+
+
+
+
+What's new in v1.1e
+
+Altering toolboxes to toggle on/off
+with menu option,
+
+Speeded up star drawing slightly
+
+Action key toggles toolbox
+
+Zoom factor saved with other settings
+
+
+What's new in v1.1d
+
+Fixed toolbox time button double-redraw
+
+What's new in v1.1c
+
+Better Zoom angle setting in Toolbox
+Goto named Messier Objects
+Switch on and off hourglass
+Slightly different dialogs
+
+
+What's new in v1.1
+
+N,S,E,W keys for quick orientation
+H,Z for looking up and down
+
+To come:
+
+Save and Load settings
+Store toolbox settings
+Timezone - confusion
+Speed up starting up?
+Goto sunrise/sunset?
+
+---
+
+* Windows CE v2 compatible
+* Simpler, more accurate TimeZone / Daylight settings
+* Simplified Location settings
+* More constellations
+* Named brightest stars
+* Movable Toolbox
+* Phase of Venus
+* Larger zoom range
+* Smoother screen updates
+* On-line help
+* Standard installation
+* Tooltips
+* Widescreen, and taskbar support
+* Corrected Distortion at higher altitudes
+* On-screen compass and altitude display
+* More commandbar tool buttons
+
+JIK = 0
+     REM *********************** JULIAN DAY *********************************
+     JIK = JIK + 1
+     GGG = 1: IF NYEAR <= 1585 THEN GGG = 0
+     F = (NHOUR / 24!) + (NMIN / (24! * 60!)) - .5
+     JD = -1 * INT(7 * (INT((NMONTH + 9) / 12) + NYEAR) / 4)
+     S = SGN(NMONTH - 9): A = ABS(NMONTH - 9)
+     J1 = INT(NYEAR + S * INT(A / 7))
+     J1 = -1 * INT((INT(J1 / 100) + 1) * 3 / 4)
+     JD = JD + INT(275 * NMONTH / 9) + NDAY + (GGG * J1)
+     JD = JD + 1721027! + 2 * GGG + 367 * NYEAR: REM Julian Day
+     REM ********************** FIND MOON ANGLES *************************
+
+JD
+double f=(lh/24)+(lm/(24*60))-0.5;
+double nn=JD - 2415020 + f;
+double mt=358.476+0.9856003*nn)*p;
+double mj=(225.328+0.0830853*nn)*p;
+double jj=221.647+0.9025179*nn;
+double vt=1.92*sin(mt)+0.02*sin(2*mt);
+double vj=5.55*sin(mj)+0.17*sin(2*mj);
+double k=(jj+vt-vj)*p;
+double dt=sqrt(28.07-10.406*cos(k));
+double z=sin(k)/dt;
+double ii=atan(z/sqrt(1-z*z));
+ii= ii / p;
+f=(nn-dt/173);
+double f1=ii-vj;
+double u[1]=84.5506+203.405863*f+f1;
+double u[2]=41.5015+101.2916323*f+f1;
+double u[3]=109.977+50.2345169*f+f1;
+double u[4]=176.3586+21.4879802*f+f1;
+
+for (int i=1;i<5;i++)
+{
+	u[i]=((u[i]/360)-Integer(u[i]/360)*360;
+	u[i]=u[i]*p+pi;
+
+
+     REM ********************* Show Results ********************************
+     SCREEN 12: CLS
+     PRINT " NAME       X    Y   Angle   Sup.Conj.Angle"
+     CIRCLE ((XMAX / 2), (YMAX / 1.65)), RP / SCALE, 12: REM  Jupiter
+     PAINT ((XMAX / 2), (YMAX / 1.65)), 12, 12: REM           Jupiter
+     LINE (0, 90)-(XMAX, YMAX), 15, B: REM                    Box
+     FOR I = 1 TO 4
+     CIRCLE (XMAX / 2, YMAX / 1.65), SMA(I) / SCALE, 8: REM   Orbital Paths
+     U(I) = ((U(I) / 360) - INT(U(I) / 360)) * 360
+     T(I) = U(I) * P + PI
+     R = SMA(I) * (1 - (E(I) ^ 2)) / (1 + (E(I) * COS(T(I))))
+     X = (XMAX / 2) + (R * SIN(T(I)) / SCALE)
+     Y = (YMAX / 1.65) - INT((R * COS(T(I)) * SIN(IA(I) * P) / SCALE) + .5)
+     CIRCLE (X, Y), 1, CS(I)
+     UU = U(I) + 180: IF UU > 360 THEN UU = UU - 360
+     PRINT USING "\      \   ###  ###   ###      ####"; N$(I); X; Y; U(I); UU
+     NEXT I

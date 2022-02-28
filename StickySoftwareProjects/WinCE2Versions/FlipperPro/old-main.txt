@@ -1,0 +1,293 @@
+
+//
+// Task Dialog
+//
+
+#include <windows.h>
+#include "resource.h"
+
+struct _SYSTEM_POWER_STATUS_EX power;
+
+extern bool once;
+extern bool kill;
+extern HINSTANCE globalinstance;
+extern bool sound;
+extern bool autokill;
+
+int b=0;
+
+//BYTE laststatus=1;
+
+
+//HBITMAP hBitmap;
+HBITMAP hBitmap_full,hBitmap_low,hBitmap_critical,hBitmap_default;
+HBITMAP frame[6];
+
+HDC hdcMem,hdc;
+int frame_counter=0;
+BYTE temp_reading,last_reading=1;
+
+
+BOOL CALLBACK TaskDialog(HWND hwnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
+{
+
+
+//	HPEN BlackPen,RedPen,GreyPen,DarkRedPen;
+//	HDC hdc;
+//	int x,y,c,l;
+
+	bool card;
+	WCHAR report1[100],report2[100];
+	ULARGE_INTEGER FreeBytesAvailable;
+	ULARGE_INTEGER TotalNumberOfBytes;
+	ULARGE_INTEGER TotalNumberOfFreeBytes;
+	double f1,f2;
+	BYTE bat1,bat2;
+
+	switch (wMsg) 
+	{
+
+		case WM_INITDIALOG:
+
+			once=true;
+
+			// Get memory stats
+			::GetDiskFreeSpaceEx(_T("\\"),&FreeBytesAvailable,&TotalNumberOfBytes,&TotalNumberOfFreeBytes);
+			f1=FreeBytesAvailable.LowPart;
+			f2=TotalNumberOfBytes.LowPart;
+			wsprintf((unsigned short *)report1,L"Memory free: %d%%\0",int(((f1/f2)*100)));
+			card=::GetDiskFreeSpaceEx(_T("\\Storage Card\\"),&FreeBytesAvailable,&TotalNumberOfBytes,&TotalNumberOfFreeBytes);
+			f1=FreeBytesAvailable.LowPart;
+			f2=TotalNumberOfBytes.LowPart;
+			if (card) wsprintf((unsigned short *)report1,L"%s Card free: %d%%\0",report1,int(((f1/f2)*100)));
+			SetDlgItemText(hwnd,IDD_TEXT1,report1);
+
+			// Set check boxes
+		 
+			SendMessage(GetDlgItem(hwnd,IDC_STARTUP),BM_SETCHECK,sound,0);
+			SendMessage(GetDlgItem(hwnd,IDC_AUTOKILL),BM_SETCHECK,autokill,0);
+			
+			hBitmap_full=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));
+			hBitmap_low=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));
+			hBitmap_critical=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));
+			hBitmap_default=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATDEFAULT));
+			
+			frame[0]=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP1));
+			frame[1]=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP2));
+			frame[2]=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP3));
+			frame[3]=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP4));
+			frame[4]=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP5));
+			frame[5]=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP6));
+
+			SetTimer(hwnd,3,200,NULL);
+
+			return true;
+
+
+		case WM_TIMER:
+
+			if (wParam!=3) return true;
+	
+			hdc=GetDC(hwnd);
+			hdcMem=CreateCompatibleDC(hdc);
+
+			//hBitmap=NULL;
+			//SelectObject(hdcMem,hBitmap);
+
+			/*
+
+			hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_LINE));
+			SelectObject(hdcMem,hBitmap);
+			BitBlt(hdc,88,90,46,1,hdcMem,0,0,SRCCOPY);
+			BitBlt(hdc,88,179,46,1,hdcMem,0,0,SRCCOPY);
+			DeleteObject(hBitmap);
+			*/
+			
+
+			/*	
+			switch (frame) {
+				case 0:b++;hBitmap=frame1;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP1));break;
+				case 1:b++;hBitmap=frame2;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP2));break;
+				case 2:b++;hBitmap=frame3;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP3));break;
+				case 3:b++;hBitmap=frame4;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP4));break;
+				case 4:b++;hBitmap=frame5;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP5));break;		
+				case 5:b++;hBitmap=frame6;LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP6));break;
+				default:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP1));break;
+			};
+			*/
+
+			//hBitmap=frame[frame_counter];
+			
+			SelectObject(hdcMem,frame[frame_counter]);	
+			frame_counter++;if (frame_counter>5) frame_counter=0;
+
+			BitBlt(hdc,94,10,32,32,hdcMem,0,0,SRCCOPY);
+			//DeleteObject(hBitmap);
+
+			Rectangle(hdc,93,9,127,42);
+
+			// Battery..
+			GetSystemPowerStatusEx(&power,true);
+			bat1=power.BatteryFlag;
+			bat2=power.BackupBatteryFlag;
+
+
+			// Check for double battery missing
+
+			temp_reading=bat1;
+			if ((bat1==128) && (last_reading!=128))
+					bat1=last_reading;
+			last_reading=temp_reading;
+		
+
+			switch (bat1) 
+			{
+			case 1:
+				wsprintf((unsigned short *)report2,L"High\0");
+				SelectObject(hdcMem,hBitmap_full);
+				//b++;hBitmap=hBitmap_full;
+				//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));
+				break;
+			case 2:
+				wsprintf((unsigned short *)report2,L"Low\0");
+				SelectObject(hdcMem,hBitmap_low);
+				//b++;hBitmap=hBitmap_low;
+				//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATLOW));
+				break;
+			case 4:
+				wsprintf((unsigned short *)report2,L"Critical\0");
+				SelectObject(hdcMem,hBitmap_critical);
+				//b++;hBitmap=hBitmap_full;
+				//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));
+				break;
+			case 8:
+				wsprintf((unsigned short *)report2,L"Charging\0");
+				switch(frame_counter) {
+					case 5:SelectObject(hdcMem,hBitmap_full);break;//b++;hBitmap=hBitmap_full;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));break;
+					case 3:SelectObject(hdcMem,hBitmap_low);break;//b++;hBitmap=hBitmap_low;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATLOW));break;
+					case 1:SelectObject(hdcMem,hBitmap_critical);break;//b++;hBitmap=hBitmap_critical;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));break;
+					case 4:SelectObject(hdcMem,hBitmap_full);break;//b++;hBitmap=hBitmap_full;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));break;
+					case 2:SelectObject(hdcMem,hBitmap_low);break;//b++;hBitmap=hBitmap_low;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATLOW));break;
+					case 0:SelectObject(hdcMem,hBitmap_critical);break;//b++;hBitmap=hBitmap_critical;break;LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));break;
+					default:SelectObject(hdcMem,hBitmap_full);break;//b++;hBitmap=hBitmap_full;break;//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));break;	
+					};
+				break;
+			case 128:
+				wsprintf((unsigned short *)report2,L"Missing!\0");
+				SelectObject(hdcMem,hBitmap_default);
+				//b++;hBitmap=hBitmap_default;
+				//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATDEFAULT));
+				break;
+			default:
+				wsprintf((unsigned short *)report2,L"Unknown\0");
+				SelectObject(hdcMem,hBitmap_default);
+				//b++;hBitmap=hBitmap_default;
+				//LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATDEFAULT));
+				break;
+			}
+		
+			//SelectObject(hdcMem,hBitmap);
+
+			BitBlt(hdc,54,131,32,32,hdcMem,0,0,SRCCOPY);
+			//DeleteObject(hBitmap);
+
+			SetDlgItemText(hwnd,IDD_TEXT2,report2);
+		
+
+			/*
+
+			switch (bat2) 
+			{
+			case BATTERY_FLAG_HIGH:
+				wsprintf((unsigned short *)report2,L"High\0");
+				b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));
+				break;
+			case BATTERY_FLAG_LOW:
+				wsprintf((unsigned short *)report2,L"Low\0");
+				b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATLOW));
+				break;
+			case BATTERY_FLAG_CRITICAL:
+				wsprintf((unsigned short *)report2,L"Critical\0");
+				b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));
+				break;
+			case BATTERY_FLAG_CHARGING:
+				wsprintf((unsigned short *)report2,L"Charging\0");
+				switch(frame) {
+					case 5:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));break;
+					case 3:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATLOW));break;
+					case 1:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));break;
+					case 4:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATFULL));break;
+					case 2:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATLOW));break;
+					case 0:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));break;
+					default:b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATCRITICAL));break;	
+					};
+				break;
+			case BATTERY_FLAG_NO_BATTERY:
+				wsprintf((unsigned short *)report2,L"Missing!\0");
+				b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATDEFAULT));
+				break;
+			default:
+				wsprintf((unsigned short *)report2,L"Unknown\0");
+				b++;hBitmap=LoadBitmap(globalinstance,MAKEINTRESOURCE(IDB_BITMAP_BATDEFAULT));
+				break;
+			}
+
+			wsprintf((unsigned short *)report2,L"B:%d F:%d \0",b,frame);
+
+			SetDlgItemText(hwnd,IDD_TEXT3,report2);
+			SelectObject(hdcMem,hBitmap);
+			BitBlt(hdc,144,131,32,32,hdcMem,0,0,SRCCOPY);
+
+			b--;DeleteObject(hBitmap);
+
+			*/
+
+			DeleteDC(hdcMem);
+			ReleaseDC(hwnd,hdc);
+			
+			return true;
+
+
+
+		case WM_COMMAND:
+			{
+				switch (LOWORD (wParam))
+				{
+					case IDOK:
+						autokill=SendMessage(GetDlgItem(hwnd,IDC_AUTOKILL),BM_GETCHECK,0,0);
+						sound=SendMessage(GetDlgItem(hwnd,IDC_STARTUP),BM_GETCHECK,0,0);
+						KillTimer(hwnd,2);
+						once=false;
+						EndDialog(hwnd,0);
+
+						for (frame_counter=0;frame_counter<6;frame_counter++)
+							DeleteObject(frame[frame_counter]);
+						DeleteObject(hBitmap_full);
+						DeleteObject(hBitmap_low);
+						DeleteObject(hBitmap_critical);
+						DeleteObject(hBitmap_default);
+
+						return true;
+
+					case IDCANCEL:
+						kill=true;
+						KillTimer(hwnd,2);
+						once=false;
+						EndDialog(hwnd,0);
+
+						for (frame_counter=0;frame_counter<6;frame_counter++)
+							DeleteObject(frame[frame_counter]);
+						DeleteObject(hBitmap_full);
+						DeleteObject(hBitmap_low);
+						DeleteObject(hBitmap_critical);
+						DeleteObject(hBitmap_default);
+
+						return true;
+				}
+			}
+		}
+
+	return false;
+}
+
+

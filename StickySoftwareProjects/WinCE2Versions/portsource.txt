@@ -1,0 +1,183 @@
+/*****************************************************************************
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+PARTICULAR PURPOSE.
+Copyright (c) 1995, 1997  Microsoft Corporation
+
+Module Name:
+
+   port.c
+
+*****************************************************************************/
+
+#include "windows.h"
+#include "tchar.h"
+#include "memory.h"
+
+#include "resource.h"
+#include "tty.h"
+
+BOOL
+InitPort (LPTSTR szDeviceName)
+{
+	DWORD	ThreadID;
+	HANDLE	hThread;
+	DCB		PortDCB;
+
+	// Initialize the port info.
+    PortDCB.DCBlength = sizeof(DCB);
+
+	if (TEXT('\0') == *szDeviceName) {
+		szDeviceName = TEXT("COM1:");
+	}
+
+	// Stash it for later.
+	_tcscpy (v_szDevName, szDeviceName);
+
+	// Try to open the serial port.
+    hPort = CreateFile(szDeviceName,
+					   GENERIC_READ | GENERIC_WRITE,
+					   0, NULL, OPEN_EXISTING,
+#ifdef _WIN32_WCE
+					   0,
+#else
+					   FILE_FLAG_OVERLAPPED,
+#endif
+					   NULL);
+
+    if ( hPort == INVALID_HANDLE_VALUE ) {
+		MessageBox (NULL, TEXT("Unable to open port"), TEXT("Error"), MB_OK);
+		return FALSE;
+    }
+
+	// Get the port info.
+    GetCommState(hPort, &PortDCB);
+
+	PortDCB.BaudRate = 9600;
+	PortDCB.fBinary = TRUE;
+	PortDCB.fParity = TRUE;
+	PortDCB.fOutxCtsFlow    = FALSE;  // ignore possible hangups
+	PortDCB.fOutxDsrFlow    = FALSE;    // don't wait on the DSR line
+	PortDCB.fDtrControl     = DTR_CONTROL_ENABLE;
+	PortDCB.fDsrSensitivity = FALSE;
+	PortDCB.fTXContinueOnXoff = TRUE;
+	PortDCB.fOutX           = FALSE; // no XON/XOFF control
+	PortDCB.fInX            = FALSE;
+	PortDCB.fErrorChar      = FALSE;
+	PortDCB.fNull           = FALSE;
+	PortDCB.fRtsControl     = RTS_CONTROL_ENABLE;
+	PortDCB.fAbortOnError   = FALSE;
+	PortDCB.ByteSize        = 8;
+	PortDCB.Parity          = NOPARITY;
+	PortDCB.StopBits        = ONESTOPBIT;
+
+	SetCommState(hPort, &PortDCB);
+	
+	PrintDCB (hPort);
+
+	// Should we initialize the parameters?
+	EscapeCommFunction (hPort, SETDTR);
+	EscapeCommFunction (hPort, SETRTS);
+
+	// Create the read thread
+	hThread = CreateThread (NULL, 0, ReadThread, 0, 0, &ThreadID);
+	CloseHandle (hThread);
+	return TRUE;
+}
+void
+PortWrite (BYTE	Byte)
+{
+	DWORD		Len;
+#ifdef _WIN32_WCE
+	WriteFile (hPort, &Byte, 1, &Len, 0);
+#else
+	OVERLAPPED	OverLapped;
+
+	memset ((char *)&OverLapped, 0, sizeof(OVERLAPPED));
+	OverLapped.hEvent = CreateEvent (NULL, TRUE, TRUE, 0);
+
+	if (!WriteFile (hPort, &Byte, 1, &Len, &OverLapped)) {
+		if (ERROR_IO_PENDING == GetLastError()) {
+			WaitForSingleObject (OverLapped.hEvent, INFINITE);
+		}
+	}
+	CloseHandle (OverLapped.hEvent);
+#endif
+}
+
+DWORD WINAPI
+ReadThread (LPVOID pvarg)
+{
+	BYTE	InByte;
+	DWORD	BytesTransferred;
+	DWORD	fdwCommMask;
+    COMMTIMEOUTS CommTimeouts;
+
+#ifndef _WIN32_WCE
+	OVERLAPPED	OverLapped;
+
+	memset ((char *)&OverLapped, 0, sizeof(OVERLAPPED));
+	OverLapped.hEvent = CreateEvent (NULL, TRUE, TRUE, 0);
+#endif
+
+    GetCommTimeouts (hPort, &CommTimeouts);
+    CommTimeouts.ReadIntervalTimeout = MAXDWORD;
+    CommTimeouts.ReadTotalTimeoutMultiplier = 0;
+    CommTimeouts.ReadTotalTimeoutConstant = 0;	// Read timeout at 50msec
+	SetCommTimeouts (hPort, &CommTimeouts);
+
+	SetCommMask (hPort, EV_RXCHAR | EV_CTS | EV_DSR | EV_RLSD | EV_RING);
+
+	while (!v_bStopThread) {
+#ifdef _WIN32_WCE
+		WaitCommEvent (hPort, &fdwCommMask, 0);
+#else
+		if (!WaitCommEvent (hPort, &fdwCommMask, &OverLapped)) {
+			if (GetLastError() == ERROR_IO_PENDING) {
+				WaitForSingleObject (OverLapped.hEvent, INFINITE);
+			}
+        }
+#endif
+
+		// Reset the comm Mask
+		SetCommMask (hPort, EV_RXCHAR | EV_CTS | EV_DSR | EV_RING);
+
+		if (fdwCommMask & EV_RXCHAR) {
+			// Loop waiting for data.
+			do {
+#ifdef _WIN32_WCE
+				ReadFile (hPort, &InByte, 1, &BytesTransferred, 0);
+#else
+				if (!ReadFile (hPort, &InByte, 1, &BytesTransferred,
+							   &OverLapped)) {
+					if (ERROR_IO_PENDING == GetLastError()) {
+						WaitForSingleObject (OverLapped.hEvent, INFINITE);
+					}
+                }
+#endif
+				if (1 == BytesTransferred) {
+					ProcessChar (InByte);
+				}
+			} while (1 == BytesTransferred);
+		}
+
+		// Should we check this anyway????
+		GetCommModemStatus (hPort, &fdwCommMask);
+		SetLightIndicators (fdwCommMask);
+	}
+
+#ifndef _WIN32_WCE
+	CloseHandle (OverLapped.hEvent);
+#endif
+	return 0;
+}
+
+void
+PrintDCB (HANDLE hPort)
+{
+	DCB	PortDCB;
+
+	PortDCB.DCBlength = sizeof(DCB);
+	GetCommState (hPort, &PortDCB);
+}

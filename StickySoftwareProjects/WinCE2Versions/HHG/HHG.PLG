@@ -1,0 +1,35 @@
+--------------------Configuration: HHG - Win32 (WCE MIPS) Release--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\HHG\HHG.DSP", at root.
+Active configuration is Win32 (WCE MIPS) Application (based on Win32 (WCE MIPS) Application)
+
+Project's tools are:
+			"C/C++ Compiler for Mips R4100" with flags "/nologo /MT /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"WMIPSRel/HHG.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /fo"WMIPSRel/HHG.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WMIPSRel/HHG.bsc" "
+			"COFF Linker for Mips R4100" with flags "/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/HHG.pdb" /machine:MIPS /out:"WMIPSRel/HHG.exe" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP36.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /Fp"WMIPSRel/HHG.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\HHG\Display.cpp"
+>
+Creating command line "clmips.exe @C:\TEMP\RSP36.tmp" 
+Creating temp file "C:\TEMP\RSP37.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/HHG.pdb" /machine:MIPS /out:"WMIPSRel/HHG.exe" /subsystem:windowsce,2.0 
+".\WMIPSRel\Control_Dialog.obj"
+".\WMIPSRel\Display.obj"
+".\WMIPSRel\HHG.obj"
+".\WMIPSRel\HHGDoc.obj"
+".\WMIPSRel\HHGView.obj"
+".\WMIPSRel\MainFrm.obj"
+".\WMIPSRel\StdAfx.obj"
+".\WMIPSRel\HHG.res">
+Creating command line "link.exe @C:\TEMP\RSP37.tmp" 
+Compiling...
+Display.cpp
+Linking...
+
+
+
+HHG.exe - 0 error(s), 0 warning(s)

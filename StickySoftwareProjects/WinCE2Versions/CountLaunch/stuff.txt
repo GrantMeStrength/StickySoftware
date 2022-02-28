@@ -1,0 +1,182 @@
+/*
+ * Window Styles
+ */
+#ifdef UNDER_NT
+#ifndef WS_THICKFRAME
+#define WS_THICKFRAME       0x00040000L
+#endif // WS_THICKFRAME
+#define WS_OVERLAPPED       0x00000000L
+#else
+// @CESYSGEN IF GWES_NCLIENT
+#define WS_OVERLAPPED       WS_BORDER | WS_CAPTION
+// @CESYSGEN ENDIF
+#endif // UNDER_NT
+#define WS_CLIPSIBLINGS     0x04000000L
+#define WS_CLIPCHILDREN     0x02000000L
+// @CESYSGEN IF GWES_NCLIENT
+#define WS_CAPTION          0x00C00000L     /* WS_BORDER | WS_DLGFRAME  */
+#define WS_BORDER           0x00800000L
+#define WS_DLGFRAME         0x00400000L
+#define WS_VSCROLL          0x00200000L
+#define WS_HSCROLL          0x00100000L
+#define WS_SYSMENU          0x00080000L
+// @CESYSGEN ENDIF
+#define WS_POPUP            0x80000000L
+
+
+/*
+ * Class styles
+ */
+#define CS_DBLCLKS          0x0008
+#define CS_GLOBALCLASS      0x4000
+
+/*
+ * Extended Window Styles
+ */
+// @CESYSGEN IF GWES_NCLIENT
+#define WS_EX_DLGMODALFRAME     0x00000001L
+// @CESYSGEN ENDIF
+#define WS_EX_TOPMOST           0x00000008L
+#if(WINVER >= 0x0400)
+// @CESYSGEN IF GWES_NCLIENT
+#define WS_EX_WINDOWEDGE        0x00000100L
+#define WS_EX_CLIENTEDGE        0x00000200L
+
+#define WS_EX_CONTEXTHELP	    0x00000400L
+#define WS_EX_STATICEDGE        0x00020000L
+// @CESYSGEN ENDIF
+
+// @CESYSGEN IF GWES_NCLIENT
+#define WS_EX_OVERLAPPEDWINDOW  (WS_EX_WINDOWEDGE | WS_EX_CLIENTEDGE)
+
+#define WS_EX_CAPTIONOKBTN      0x80000000L
+#define WS_EX_NODRAG            0x40000000L
+// @CESYSGEN ENDIF
+#define WS_EX_ABOVESTARTUP		0x20000000L
+#define WS_EX_INK				0x10000000L
+#define WS_EX_NOANIMATION		0x04000000L
+
+#endif /* WINVER >= 0x0400 */
+
+
+
+
+#define ZeroVar(v) memset(&v,0,sizeof(v))
+
+EnumerateWindow
+
+const TCHAR* const psz=TEXT("MainWndClass");
+
+WNDCLASS wc;
+
+ZeroVar(wc);
+
+wc.style=0;
+wc.lpfnWndProc=NULL;
+wc.cbClsExtra=0;
+wc.cbWndExtra=0;
+wc.hInstance=hInstance;
+wc.hIcon=0;
+wc.hCursor=0;
+wc.hbrBackground=(HBRUSH)GetStockObject(WHITE_BRUSH);
+wc.lpszMenuName=NULL;
+wc.lpszClassName=psz;
+
+RegisterClass(&wc);
+
+	HWND mywindow=CreateWindow(
+		psz,
+		TEXT("Main"),
+		WS_OVERLAPPED|WS_SYSMENU,
+		CW_USEDEFAULT, CW_USEDEFAULT,
+		CW_USEDEFAULT, CW_USEDEFAULT,
+		NULL,NULL,
+		hInstance,
+		NULL
+
+		);
+
+
+			/*
+		
+		//SetForegroundWindow(next);
+		//ShowWindow(next,SW_HIDE);
+/	/}
+//	else
+		sndPlaySound(L"alarm3", SND_FILENAME|SND_ASYNC);
+	
+	long id=GetWindowLong(next,GWL_STYLE);
+
+	if (id|WS_CAPTION) 
+	{
+		//title bar!
+		SetForegroundWindow(next);
+	}
+	*/
+	//EnumWindows(EnumWindowsProc,NULL);
+	/*
+	if (next!=NULL)
+	{
+		find=GetParent(next);
+		if (find==NULL)	// null means top level
+		{
+			//MessageBox(NULL,L"B1",L"",MB_OK);
+			
+			if (find==NULL)
+			{
+				sndPlaySound(L"alarm1", SND_FILENAME|SND_ASYNC);
+			}
+			else
+			{
+				SetForegroundWindow(find);
+				sndPlaySound(L"alarm2", SND_FILENAME|SND_ASYNC);
+			}
+		}
+		else
+		{
+			MessageBox(NULL,L"B2",L"",MB_OK);
+			find=GetWindow(find,GW_HWNDPREV);
+			ShowWindow(find,SW_SHOW);
+		}
+	}
+
+	else
+		MessageBox(NULL,L"Nothing to do",L"",MB_OK);
+
+	// GetWindow
+	// ShowWindow
+
+		
+	//winpoint =  GetTopWindow(NULL);
+		
+		
+	//	GetWindow(NULL,GW_HWNDNEXT);
+
+	//if (mywindow==NULL)
+	//	MessageBox(NULL,L"NULL",L"",MB_OK);
+
+	*/
+
+	if (next!=NULL) 
+	{
+		while((count<10)&&(loop==false))
+		{	
+			id=GetWindowLong(next,GWL_STYLE);
+			if ((id&WS_VISIBLE)!=0) //WS_CAPTION) 
+			{
+				//title bar!
+				SetForegroundWindow(next);
+				//sndPlaySound(L"alarm3", SND_FILENAME|SND_ASYNC);
+				MessageBox(NULL,L"NewWin",L"",MB_OK);
+				loop=true;
+			}
+			else
+			{
+				sndPlaySound(L"alarm3", SND_FILENAME|SND_SYNC);
+				next=GetWindow(next,GW_HWNDNEXT);
+			}
+			count++;
+		}
+	}
+	else
+		MessageBox(NULL,L"plopit",L"",MB_OK);

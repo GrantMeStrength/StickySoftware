@@ -1,0 +1,712 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#include ""res\\ViewMark1.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""wceres.rc""         // WCE-specific components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_AppIcon             ICON    DISCARDABLE     "res\\appicon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+BUTTONLEFTU             BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+BUTTONRIGHTU            BITMAP  DISCARDABLE     "res\\button_r.bmp"
+BUTTONUPU               BITMAP  DISCARDABLE     "res\\button_u.bmp"
+BUTTONDOWNU             BITMAP  DISCARDABLE     "res\\button_d.bmp"
+BUTTONSOUTHU            BITMAP  DISCARDABLE     "res\\buttonup.bmp"
+BUTTONNORTHU            BITMAP  DISCARDABLE     "res\\buttonno.bmp"
+BUTTONEASTU             BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+BUTTONWESTU             BITMAP  DISCARDABLE     "res\\bmp00003.bmp"
+BUTTONTIMEMINUSU        BITMAP  DISCARDABLE     "res\\buttonti.bmp"
+BUTTONTIMEPLUSU         BITMAP  DISCARDABLE     "res\\bmp00004.bmp"
+BUTTONUPD               BITMAP  DISCARDABLE     "res\\bmp00005.bmp"
+BUTTONDOWND             BITMAP  DISCARDABLE     "res\\buttondo.bmp"
+BUTTONRIGHTD            BITMAP  DISCARDABLE     "res\\buttonri.bmp"
+BUTTONLEFTD             BITMAP  DISCARDABLE     "res\\buttonle.bmp"
+BUTTONZOOMINU           BITMAP  DISCARDABLE     "res\\bmp00006.bmp"
+BUTTONZOOMOUTU          BITMAP  DISCARDABLE     "res\\buttonzo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_TASK_AUTOTIME
+    BUTTON      IDD_FIND_DIALOG
+    BUTTON      IDD_HOW_DIALOG
+    BUTTON      ID_TASK_OUTLINES
+    BUTTON      ID_TASK_INVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open Settings",               ID_FILE_OPEN
+        MENUITEM "Save Settings",               ID_FILE_SAVE
+        MENUITEM "Save As...",                  ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "About...",                    ID_APP_ABOUT
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Set Location...",             ID_CONTROL_LOCATION
+        MENUITEM "Set Time/Date...",            IDD_WHEN_DIALOG
+        MENUITEM "Set Update...",               IDD_UPDATE_DIALOG
+        MENUITEM "Display Options...",          IDD_HOW_DIALOG
+        MENUITEM "Define Keys...",              IDD_KEY_DEFINE
+        MENUITEM SEPARATOR
+        MENUITEM "Magnitude Chart",             IDD_KEY_DIALOG
+        MENUITEM "Toolbox",                     IDD_TOOL_DIALOG
+        MENUITEM "Indicators",                  IDD_COMPASS
+        MENUITEM "Jupiter's Moons",             ID_MENU_JUPITER
+        MENUITEM "Ephemeris",                   ID_MENU_EPHEMERIS
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Zoom In",                     ID_CONTROL_ZOOM_IN
+        MENUITEM "Zoom Out",                    ID_CONTROL_ZOOM_OUT
+        MENUITEM SEPARATOR
+        MENUITEM "Current Time",                ID_CONTROL_TIME_NOW
+        MENUITEM "Time Advance",                ID_CONTROL_TIME_PLUS
+        MENUITEM "Time Regress",                ID_CONTROL_TIME_MINUS
+        MENUITEM SEPARATOR
+        MENUITEM "Goto Alt/Az...",              IDD_GOTO_ALTAZ_DIALOG
+        MENUITEM "Goto Ra/Dec...",              IDD_GOTO_RADEC_DIALOG
+        MENUITEM "Goto Object...",              IDD_FIND_DIALOG
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "E",            ID_CONTROL_LOOK_EAST,   VIRTKEY, NOINVERT
+    "H",            ID_CONTROL_LOOK_HORIZON, VIRTKEY, NOINVERT
+    "H",            ID_HELP,                VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_CONTROL_ZOOM_IN,     VIRTKEY, NOINVERT
+    "I",            ID_CONTROL_ZOOM_IN,     VIRTKEY, SHIFT, NOINVERT
+    "N",            ID_CONTROL_LOOK_NORTH,  VIRTKEY, NOINVERT
+    "O",            ID_CONTROL_ZOOM_OUT,    VIRTKEY, NOINVERT
+    "O",            ID_CONTROL_ZOOM_OUT,    VIRTKEY, SHIFT, NOINVERT
+    "Q",            ID_APP_EXIT,            VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_CONTROL_LOOK_SOUTH,  VIRTKEY, NOINVERT
+    VK_DOWN,        ID_CONTROL_LOOK_DOWN,   VIRTKEY, NOINVERT
+    VK_DOWN,        ID_CONTROL_LOOK_DOWN,   VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_CONTROL_LOOK_LEFT,   VIRTKEY, NOINVERT
+    VK_LEFT,        ID_CONTROL_LOOK_LEFT,   VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      IDD_TOOL_DIALOG,        VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_CONTROL_LOOK_RIGHT,  VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_CONTROL_LOOK_RIGHT,  VIRTKEY, SHIFT, NOINVERT
+    VK_UP,          ID_CONTROL_LOOK_UP,     VIRTKEY, NOINVERT
+    VK_UP,          ID_CONTROL_LOOK_UP,     VIRTKEY, SHIFT, NOINVERT
+    "W",            ID_CONTROL_LOOK_WEST,   VIRTKEY, NOINVERT
+    "Z",            ID_CONTROL_LOOK_ZENITH, VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 135, 101
+STYLE DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Pocket Universe"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Pocket Universe",IDC_STATIC,6,4,79,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1998 Sticky Software",IDC_STATIC,6,31,120,
+                    8
+    LTEXT           "v1.2 Betelgeuse",IDC_STATIC,6,22,84,8
+    LTEXT           "Sticky",IDC_TOP_TIP,6,45,126,30
+    CONTROL         "Display at start",IDC_CHECK_TIP,"Button",
+                    BS_AUTOCHECKBOX,5,86,78,12
+    LTEXT           "Mobilesoft",IDC_STATIC,6,13,85,8
+    ICON            IDI_AppIcon,IDC_STATIC,98,7,20,20
+END
+
+IDD_WHERE_DIALOG DIALOG DISCARDABLE  0, 0, 142, 82
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_LAT_BOX_DEG,22,11,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_LAT_DEG,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,47,8,11,14
+    EDITTEXT        IDC_LAT_BOX_MIN,56,10,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_LAT_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,79,16,11,14
+    EDITTEXT        IDC_LAT_BOX_SEC,90,10,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_LAT_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,118,5,8,14
+    PUSHBUTTON      "?",IDC_BUTTON_NORTH_SOUTH,121,10,13,14,0,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_LONG_BOX_DEG,22,27,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_LONG_DEG,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,47,30,11,14
+    EDITTEXT        IDC_LONG_BOX_MIN,56,27,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_LONG_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,80,31,11,14
+    EDITTEXT        IDC_LONG_BOX_SEC,90,27,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_LONG_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,117,32,8,14
+    PUSHBUTTON      "?",IDC_BUTTON_EAST_WEST,121,27,13,14,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_TIME_TZ,22,43,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TZ,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,50,45,8,14
+    COMBOBOX        IDC_COMBO_WHERE,76,43,59,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,20,63,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,87,63,50,14
+    LTEXT           "Lat",IDC_STATIC,2,13,16,8
+    LTEXT           "Degrees    Minutes    Seconds",IDC_STATIC,22,0,99,8,NOT 
+                    WS_GROUP
+    LTEXT           "TZ",IDC_STATIC,2,46,10,8
+    LTEXT           "Long",IDC_STATIC,2,30,19,8
+    LTEXT           "E.g.",IDC_STATIC,60,46,15,10
+END
+
+IDD_WHEN_DIALOG DIALOG DISCARDABLE  0, 0, 111, 76
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,6,62,42,12
+    PUSHBUTTON      "Cancel",IDCANCEL,60,62,42,12
+    EDITTEXT        IDC_TIME_HOUR,7,10,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_HOUR,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,26,10,8,
+                    14
+    EDITTEXT        IDC_TIME_MIN,37,10,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,62,10,8,14
+    EDITTEXT        IDC_TIME_SEC,67,10,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,88,10,8,14
+    EDITTEXT        IDC_DAY_BOX,7,31,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_DAY,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,27,30,8,
+                    14
+    EDITTEXT        IDC_MONTH_BOX,37,32,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_MONTH,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,59,31,8,14
+    EDITTEXT        IDC_YEAR_BOX,67,32,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN_YEAR,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,84,31,8,14
+    LTEXT           "Day      Month        Year",IDC_STATIC,11,22,89,8
+    LTEXT           "Hours     Minutes   Seconds",IDC_STATIC,8,0,94,8
+    CONTROL         "Daylight  Saving",IDC_CHECK_DAYLIGHT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,48,66,10
+END
+
+IDD_SETTINGS_DIALOG DIALOG DISCARDABLE  16, 24, 122, 134
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,85,100,32,14
+    PUSHBUTTON      "Cancel",IDCANCEL,85,116,32,14
+    CONTROL         "Sights",IDC_CHECK_SITES,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,24,51,10
+    CONTROL         "Horizon",IDC_CHECK_HORIZON,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,44,48,10
+    CONTROL         "Invert",IDC_CHECK_INVERT,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,64,51,10
+    CONTROL         "Compass",IDC_CHECK_MARKERS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,14,51,10
+    CONTROL         "Planets",IDC_CHECK_PLANETS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,34,48,10
+    CONTROL         "Labels",IDC_CHECK_LABELS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,4,51,10
+    CONTROL         "Details",IDC_CHECK_DETAILS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,64,48,10
+    CONTROL         "Stars",IDC_CHECK_STARS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,4,48,10
+    COMBOBOX        IDC_COMBO_MAGNITUDES,5,105,73,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Messier",IDC_CHECK_MESS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,24,48,10
+    LTEXT           "Show stars which are:",IDC_STATIC,6,95,77,8
+    CONTROL         "Parallax",IDC_CHECK_PARALLAX,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,34,51,10
+    CONTROL         "Hide low",IDC_CHECK_HIDE,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,44,51,10
+    CONTROL         "Sun/Moon",IDC_CHECK_SM,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,14,48,10
+    CONTROL         "Outlines",IDC_CHECK_OUTLINE,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,54,48,10
+    CONTROL         "Real Size",IDC_CHECK_REALSIZE,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,54,51,10
+    LTEXT           "and brighter.",IDC_STATIC,6,118,44,8
+    CONTROL         "Grid",IDC_CHECK_GRID,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,74,48,10
+    CONTROL         "HourGlass",IDC_CHECK_HOURGLASS,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,62,74,51,10
+    CONTROL         "Ecliptic",IDC_CHECK_ECLIPTIC,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,5,84,48,10
+END
+
+IDD_SEARCH_DIALOG DIALOG DISCARDABLE  0, 0, 91, 90
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,75,35,14
+    PUSHBUTTON      "Cancel",IDCANCEL,48,75,35,14
+    COMBOBOX        IDC_COMBO_GOTOSOLAR,8,3,75,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_GOTOCONST,8,20,75,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_GOTOSTAR,8,38,75,58,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MESS_NUMBER,52,56,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_MESS_NUMBER,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,75,56,11,14
+    LTEXT           "Messier Object M:",-1,10,54,37,21
+END
+
+IDD_GOTO_ALTAZ_DIALOG DIALOG DISCARDABLE  0, 0, 139, 75
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,19,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,74,56,50,14
+    EDITTEXT        IDC_GOTO_ALT_DEG,20,19,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_ALT_DEG,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,44,14,11,14
+    EDITTEXT        IDC_GOTO_ALT_MIN,56,19,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_GOTO_ALT_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,84,16,11,14
+    EDITTEXT        IDC_GOTO_ALT_SEC,92,19,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_ALT_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,123,16,8,14
+    EDITTEXT        IDC_GOTO_AZ_DEG,20,38,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_AZ_DEG,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,44,43,11,14
+    EDITTEXT        IDC_GOTO_AZ_MIN,56,37,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_GOTO_AZ_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,84,42,11,14
+    EDITTEXT        IDC_GOTO_AZ_SEC,92,37,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_AZ_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,123,43,8,14
+    LTEXT           "Alt ",IDC_STATIC,4,23,11,8
+    LTEXT           "Azm ",IDC_STATIC,4,39,15,8
+    LTEXT           "Degrees    Minutes     Seconds",IDC_STATIC,22,8,114,10,
+                    NOT WS_GROUP
+END
+
+IDD_GOTO_RADEC_DIALOG DIALOG DISCARDABLE  0, 0, 155, 75
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,22,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,90,56,50,14
+    EDITTEXT        IDC_GOTO_RA_HOUR,22,19,31,15,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_RA_HOUR,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,53,19,11,14
+    EDITTEXT        IDC_GOTO_RA_MIN,65,19,31,15,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_GOTO_RA_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,94,19,11,14
+    EDITTEXT        IDC_GOTO_RA_SEC,107,19,31,15,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_RA_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,138,20,8,14
+    EDITTEXT        IDC_GOTO_DEC_DEG,22,38,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_DEC_DEG,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,53,38,11,14
+    EDITTEXT        IDC_GOTO_DEC_MIN,65,37,31,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_GOTO_DEC_MIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,94,37,11,14
+    EDITTEXT        IDC_GOTO_DEC_SEC,107,37,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_GOTO_DEC_SEC,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,137,38,8,14
+    LTEXT           "Ra ",IDC_STATIC,8,22,12,8
+    LTEXT           "Dec ",IDC_STATIC,6,39,16,8
+    LTEXT           "Hrs/Degs      Minutes       Seconds",IDC_STATIC,24,8,
+                    114,10,NOT WS_GROUP
+END
+
+IDD_KEY_DIALOG DIALOG DISCARDABLE  100, 80, 52, 77
+STYLE WS_CHILD | WS_VISIBLE | WS_BORDER
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "0-\n1\n2\n3\n4\n5\n6+",IDC_STATIC,5,15,14,56
+    LTEXT           "Magnitudes",IDC_STATIC,6,5,38,9
+END
+
+IDD_UPDATE_DIALOG DIALOG DISCARDABLE  0, 0, 127, 78
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,60,35,15
+    PUSHBUTTON      "Cancel",IDCANCEL,65,60,40,15
+    EDITTEXT        IDC_EDIT_JUMP_VALUE,41,4,29,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_JUMPVALUE,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,62,3,10,14
+    COMBOBOX        IDC_COMBO_HOW,71,4,54,67,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DELAY_VALUE,30,23,29,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_DELAYVALUE,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,54,26,11,14
+    COMBOBOX        IDC_COMBO_WHO,51,41,57,67,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "seconds.",IDC_STATIC,65,25,29,8
+    LTEXT           "Update by",IDC_STATIC,4,6,35,8
+    LTEXT           "every",IDC_STATIC,4,25,20,8
+    LTEXT           "Lock to",IDC_STATIC,21,43,30,8
+END
+
+IDD_DIALOG_JOVIAN DIALOG DISCARDABLE  10, 32, 112, 97
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 8, "PegasusDialog"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,44,83,30,12
+    LTEXT           "Moons of Jupiter",IDC_STATIC,29,6,55,8
+    LTEXT           " I - Io\t\tE - Europa\nG - Ganymede\tC - Callisto",
+                    IDC_STATIC,6,64,101,18
+END
+
+IDD_KEY_DEFINE DIALOG DISCARDABLE  0, 0, 112, 87
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,71,35,14
+    PUSHBUTTON      "Cancel",IDCANCEL,66,70,35,14
+    CONTROL         "Look up and down",IDC_RADIO_LOOK,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT,14,18,85,15
+    CONTROL         "Zoom in and out",IDC_RADIO_ZOOM,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,14,31,85,15
+    CONTROL         "Time advance/regress",IDC_RADIO_TIME,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT,14,45,85,15
+    GROUPBOX        "The Up/Down Keys:",IDC_STATIC,5,5,100,60
+END
+
+IDD_TOOLBOX_DIALOG DIALOG DISCARDABLE  4, 86, 27, 58
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 9, "Tahoma"
+BEGIN
+    CONTROL         "Slider1",IDC_ZOOM_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_VERT,19,0,8,56
+    CONTROL         "BUTTONNORTH",IDC_BUTTON_NORTH,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,0,19,9,9
+    CONTROL         "BUTTONSOUTH",IDC_BUTTON_SOUTH,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,10,19,9,9
+    CONTROL         "BUTTONUP",IDC_BUTTONUP,"Button",BS_OWNERDRAW,0,0,11,10
+    CONTROL         "BUTTONDOWN",IDC_BUTTONDOWN,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,10,1,11,10
+    CONTROL         "BUTTONLEFT",IDC_BUTTONLEFT,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,0,10,11,10
+    CONTROL         "BUTTONRIGHT",IDC_BUTTONRIGHT,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,10,10,11,10
+    CONTROL         "BUTTONWEST",IDC_BUTTON_WEST,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,10,29,9,9
+    CONTROL         "BUTTONEAST",IDC_BUTTON_EAST,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,0,29,9,9
+    CONTROL         "BUTTONTIMEMINUS",IDC_BUTTON_TIMEMINUS,"Button",
+                    BS_OWNERDRAW | BS_CENTER | BS_VCENTER,10,39,9,9
+    CONTROL         "BUTTONTIMEPLUS",IDC_BUTTON_TIMEPLUS,"Button",
+                    BS_OWNERDRAW | BS_CENTER | BS_VCENTER,0,39,9,9
+    CONTROL         "BUTTONZOOMOUT",IDC_BUTTON_ZOOMOUT,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,10,48,9,9
+    CONTROL         "BUTTONZOOMIN",IDC_BUTTON_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    BS_CENTER | BS_VCENTER,0,48,9,9
+END
+
+IDD_EPHEMERIS_DIALOG DIALOG DISCARDABLE  8, 15, 118, 149
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "PegasusDialog"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,42,133,32,14
+    CTEXT           "Ephemeris for: 11/11/98",IDC_STRING_DATE,9,5,101,11
+    LTEXT           "Rises             Sets",IDC_STATIC,43,19,59,9
+    LTEXT           "Sun",IDC_STRING_SUN,7,29,104,9
+    LTEXT           "Moon",IDC_STRING_MOON,7,38,104,9
+    LTEXT           "",IDC_STRING_MERCURY,7,47,104,9
+    LTEXT           "",IDC_STRING_VENUS,7,56,104,9
+    LTEXT           "",IDC_STRING_MARS,7,65,104,9
+    LTEXT           "",IDC_STRING_JUPITER,7,74,104,9
+    LTEXT           "",IDC_STRING_SATURN,7,83,104,9
+    LTEXT           "",IDC_STRING_NEPTUNE,7,101,104,9
+    LTEXT           "",IDC_STRING_PLUTO,7,110,104,9
+    LTEXT           "",IDC_STRING_URANUS,7,92,104,9
+    LTEXT           "",IDC_STRING_USER,7,119,104,9
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Pocket Universe WCE MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PU\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "OriginalFilename", "PUniverse.EXE\0"
+            VALUE "ProductName", "Pocket Universe Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_WHERE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_WHEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 108
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_SETTINGS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 115
+        TOPMARGIN, 3
+    END
+
+    IDD_SEARCH_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 84
+    END
+
+    IDD_KEY_DIALOG, DIALOG
+    BEGIN
+        TOPMARGIN, 1
+    END
+
+    IDD_UPDATE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_DIALOG_JOVIAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 105
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_KEY_DEFINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 105
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_TOOLBOX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 20
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_EPHEMERIS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 111
+        TOPMARGIN, 3
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Pocket Universe\nMyHouse\n\nPUniverse(*.uni)\n.uni\nPUniverse.Document\nPUniverse Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#include "res\ViewMark1.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "wceres.rc"         // WCE-specific components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

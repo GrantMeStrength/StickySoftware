@@ -1,0 +1,41 @@
+void RedrawNoFlicker(CDC *pDC)
+{
+	// Redraw the entire screen
+
+	int fl;
+
+	if (linemode==1) fl=0; else fl=1;
+	
+	ResetL();
+
+	//ClearScreen1(&pMemDC);
+	//ClearScreen2(&pMemDC);
+	
+
+
+	if (panzer.Active()) panzer.Draw(&pMemDC);
+	if (panzer2.Active()) panzer2.Draw(&pMemDC);
+	if (martian.Active()) martian.Draw(&pMemDC);
+
+	for (int i=0;i<3;i++)
+		box[i].Draw(&pMemDC);
+
+	depot.Draw(&pMemDC);
+	shell.Draw(&pMemDC);
+	tank1shell.Draw(&pMemDC);
+	edge.Draw(&pMemDC);
+
+	EraseL(pDC);
+	DrawL(pDC);
+
+	linemode=fl;
+
+
+	/*
+	if (frame==0)
+		pDC->BitBlt(ORIGINX,0,(WIDTH-1),320,&pMemDC,0,0,SRCCOPY);
+	else
+		pDC->BitBlt(ORIGINX,ORIGIN,(WIDTH-1),(320-ORIGIN),&pMemDC,0,ORIGIN,SRCCOPY);
+	*/
+
+}

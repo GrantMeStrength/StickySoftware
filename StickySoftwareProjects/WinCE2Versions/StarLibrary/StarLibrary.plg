@@ -1,0 +1,15 @@
+--------------------Configuration: StarLibrary - Win32 (WCE x86em) Release--------------------
+Begining build with project "E:\Program Files\DevStudio\MyProjects\WinCE2Versions\StarLibrary\StarLibrary.dsp", with item "StarLibraryFunctions.cpp"
+Active configuration is Win32 (WCE x86em) Dynamic-Link Library (based on Win32 (WCE x86em) Dynamic-Link Library)
+
+
+Creating temp file "C:\TEMP\RSP56.tmp" with contents </nologo /ML /W3 /GX- /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /Fp"x86emRel/StarLibrary.pch" /YX /Fo"x86emRel/" /c 
+"E:\Program Files\DevStudio\MyProjects\WinCE2Versions\StarLibrary\StarLibraryFunctions.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP56.tmp" 
+Compiling...
+StarLibraryFunctions.cpp
+
+
+
+StarLibraryFunctions.obj - 0 error(s), 0 warning(s)

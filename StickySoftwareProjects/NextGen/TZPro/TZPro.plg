@@ -1,0 +1,76 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TZPro - Win32 (WCE x86em) Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /fo"x86emDbg/TZPro.res" /d UNDER_CE=211 /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=211 /d "H/PC Pro 2.11" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "_DEBUG" /d "x86" /d "i486" /d "_x86_" /d "_AFXDLL" "E:\Program Files\DevStudio\MyProjects\NextGen\TZPro\TZPro.rc"" 
+Creating temporary file "C:\TEMP\RSP13.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX- /Zi /Od /D UNDER_CE=211 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /D "_MBCS" /Fp"x86emDbg/TZPro.pch" /Yu"stdafx.h" /Fo"x86emDbg/" /Fd"x86emDbg/" /c 
+"E:\Program Files\DevStudio\MyProjects\NextGen\TZPro\TZPro.cpp"
+"E:\Program Files\DevStudio\MyProjects\NextGen\TZPro\MainFrm.cpp"
+"E:\Program Files\DevStudio\MyProjects\NextGen\TZPro\TZProDoc.cpp"
+"E:\Program Files\DevStudio\MyProjects\NextGen\TZPro\TZProView.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSP13.tmp" 
+Creating temporary file "C:\TEMP\RSP14.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX- /Zi /Od /D UNDER_CE=211 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /D "_MBCS" /Fp"x86emDbg/TZPro.pch" /Yc"stdafx.h" /Fo"x86emDbg/" /Fd"x86emDbg/" /c 
+"E:\Program Files\DevStudio\MyProjects\NextGen\TZPro\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\TEMP\RSP14.tmp" 
+Creating temporary file "C:\TEMP\RSP15.tmp" with contents
+[
+/nologo /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:yes /pdb:"x86emDbg/TZPro.pdb" /debug /machine:I386 /out:"x86emDbg/TZPro.exe" /windowsce:emulation 
+".\x86emDbg\TZPro.obj"
+".\x86emDbg\StdAfx.obj"
+".\x86emDbg\MainFrm.obj"
+".\x86emDbg\TZProDoc.obj"
+".\x86emDbg\TZProView.obj"
+".\x86emDbg\TZPro.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP15.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(265) : error C2146: syntax error : missing ';' before identifier 'doubleBits'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(265) : error C2501: 'BYTE' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(265) : error C2501: 'doubleBits' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(266) : error C2146: syntax error : missing ';' before identifier 'floatBits'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(266) : error C2501: 'BYTE' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(266) : error C2501: 'floatBits' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : error C2143: syntax error : missing ';' before '__stdcall'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : error C2501: 'BOOL' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : error C2065: 'LPCSTR' : undeclared identifier
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : error C2146: syntax error : missing ')' before identifier 'lpszFileName'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : warning C4229: anachronism used : modifiers on data are ignored
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : error C2501: 'AfxAssertFailedLine' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(282) : error C2059: syntax error : ')'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(284) : error C2065: 'LPCTSTR' : undeclared identifier
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(284) : error C2146: syntax error : missing ')' before identifier 'lpszFormat'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(284) : warning C4229: anachronism used : modifiers on data are ignored
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(284) : error C2182: 'AfxTrace' : illegal use of type 'void'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(284) : error C2059: syntax error : ')'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(287) : error C2061: syntax error : identifier 'LPCSTR'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : error C2143: syntax error : missing ';' before '__stdcall'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : error C2501: 'BOOL' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : error C2086: 'BOOL' : redefinition
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : error C2146: syntax error : missing ')' before identifier 'bDLL'
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : warning C4229: anachronism used : modifiers on data are ignored
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : error C2501: 'AfxInitialize' : missing storage-class or type specifiers
+C:\Windows CE Tools\wce211\MS HPC PRO\mfc\include\afx.h(390) : error C2059: syntax error : ')'
+C:\Windows CE Tools\wce211\MS HPC PRO\include\wininet.h(40) : error C2146: syntax error : missing ';' before identifier 'HINTERNET'
+C:\Windows CE Tools\wce211\MS HPC PRO\include\wininet.h(40) : fatal error C1004: unexpected end of file found
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+TZPro.exe - 25 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

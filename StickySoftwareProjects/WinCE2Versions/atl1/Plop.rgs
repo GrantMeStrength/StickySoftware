@@ -1,0 +1,26 @@
+HKCR
+{
+	Atl1.Plop.1 = s 'Plop Class'
+	{
+		CLSID = s '{385A1EE1-EDB2-11D2-B709-00A0C9B5E577}'
+	}
+	Atl1.Plop = s 'Plop Class'
+	{
+		CLSID = s '{385A1EE1-EDB2-11D2-B709-00A0C9B5E577}'
+		CurVer = s 'Atl1.Plop.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {385A1EE1-EDB2-11D2-B709-00A0C9B5E577} = s 'Plop Class'
+		{
+			ProgID = s 'Atl1.Plop.1'
+			VersionIndependentProgID = s 'Atl1.Plop'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{385A1ED2-EDB2-11D2-B709-00A0C9B5E577}'
+		}
+	}
+}

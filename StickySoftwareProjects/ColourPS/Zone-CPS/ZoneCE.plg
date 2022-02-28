@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ZoneCE - Win32 (WCE SH3) ReleaseInc--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TEMP\RSP23.tmp" with contents
+[
+/nologo /MT /W3 /O2 /D "NDEBUG" /D "SH3" /D "_SH3_" /D "_WIN32_WCE" /D "UNICODE" /Fo"ZoneCE_3/" /QMRWCE /c 
+"E:\Program Files\DevStudio\MyProjects\ColourPS\Zone-CPS\ZoneCEView.cpp"
+]
+Creating command line "shcl.exe @C:\TEMP\RSP23.tmp" 
+Creating temporary file "C:\TEMP\RSP24.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"TankSH3_inc/TankSH3.pdb" /machine:SH3 /nodefaultlib:"corelibc.lib" /out:"TankSH3/TankSH3.exe" /subsystem:windowsce 
+".\ZoneCE_3\MainFrm.obj"
+".\ZoneCE_3\RegStuff.obj"
+".\ZoneCE_3\StdAfx.obj"
+".\ZoneCE_3\ThreeD.obj"
+".\ZoneCE_3\ZoneCE.obj"
+".\ZoneCE_3\ZoneCEDoc.obj"
+".\ZoneCE_3\ZoneCEView.obj"
+".\ZoneCE_3\ZoneCE.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP24.tmp"
+<h3>Output Window</h3>
+Compiling...
+Command line warning D4002 : ignoring unknown option '/QMRWCE'
+ZoneCEView.cpp
+E:\Program Files\DevStudio\MyProjects\ColourPS\Zone-CPS\ZoneCEView.cpp(181) : warning C4800: 'short' : forcing value to bool 'true' or 'false' (performance warning)
+E:\Program Files\DevStudio\MyProjects\ColourPS\Zone-CPS\ZoneCEView.cpp(186) : warning C4800: 'short' : forcing value to bool 'true' or 'false' (performance warning)
+E:\Program Files\DevStudio\MyProjects\ColourPS\Zone-CPS\ZoneCEView.cpp(187) : warning C4800: 'short' : forcing value to bool 'true' or 'false' (performance warning)
+E:\Program Files\DevStudio\MyProjects\ColourPS\Zone-CPS\ZoneCEView.cpp(189) : warning C4800: 'short' : forcing value to bool 'true' or 'false' (performance warning)
+Linking...
+
+
+
+<h3>Results</h3>
+TankSH3.exe - 0 error(s), 5 warning(s)
+</pre>
+</body>
+</html>

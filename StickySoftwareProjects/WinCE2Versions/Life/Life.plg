@@ -1,0 +1,60 @@
+--------------------Configuration: Life - Win32 (WCE x86em) test--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\Life.dsp", at root.
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86em" with flags "/nologo /MT /W3 /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /Fo"Life/" /QMRWCE /c "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"Life.res" /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" /d "_AFXDLL" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"Life/Life.bsc" "
+			"COFF Linker for 80x86em" with flags "/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"Life.pdb" /machine:IX86 /out:"Life.exe" /subsystem:windowsce "
+			"Empfile Utility" with flags "-COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /fo"Life.res" /d UNDER_CE=200 /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=200 /d "H/PC Ver. 2.00" /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\Life.rc"" 
+Creating temp file "C:\TEMP\RSP9B.tmp" with contents </nologo /MT /W3 /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /Fo"Life/" /QMRWCE /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\LifeView.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\FileHandler.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\GamePlusPlus.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\Life.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\LifeDoc.cpp"
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\MainFrm.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP9B.tmp" 
+Creating temp file "C:\TEMP\RSP9C.tmp" with contents </nologo /MT /W3 /O2 /D UNDER_CE=200 /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_x86_" /D "_AFXDLL" /Fp"Life/Life.pch" /Yc"stdafx.h" /Fo"Life/" /QMRWCE /c 
+"C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\StdAfx.cpp"
+>
+Creating command line "cl.exe @C:\TEMP\RSP9C.tmp" 
+Creating temp file "C:\TEMP\RSP9D.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"Life.pdb" /machine:IX86 /out:"Life.exe" /subsystem:windowsce 
+".\Life\FileHandler.obj"
+".\Life\GamePlusPlus.obj"
+".\Life\Life.obj"
+".\Life\LifeDoc.obj"
+".\Life\LifeView.obj"
+".\Life\MainFrm.obj"
+".\Life\StdAfx.obj"
+".\Life.res">
+Creating command line "link.exe @C:\TEMP\RSP9D.tmp" 
+Compiling resources...
+Compiling...
+Command line warning D4002 : ignoring unknown option '/QMRWCE'
+StdAfx.cpp
+Compiling...
+Command line warning D4002 : ignoring unknown option '/QMRWCE'
+LifeView.cpp
+FileHandler.cpp
+GamePlusPlus.cpp
+Life.cpp
+LifeDoc.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+Creating command line "empfile.exe -COPY  "C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\Life.exe" "WCE:Life.exe"" 
+
+Copying 'C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\Life.exe' from NT to 'Life.exe' on object store...Done.
+Copying 'C:\Program Files\DevStudio\MyProjects\WinCE2Versions\Life\Life.exe' from NT to 'C:\Program Files\Windows CE Platform SDK\wce\emul\hpc\Life.exe' on NT...Done.
+
+
+
+Life.exe - 0 error(s), 2 warning(s)

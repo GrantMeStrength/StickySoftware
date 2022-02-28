@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: test9 - Win32 (WCE MIPS) Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x809 /r /fo"WMIPSRel/test9.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=211 /d _WIN32_WCE=211 /d "H/PC Pro 2.11" /d "UNICODE" /d "NDEBUG" /d "_AFXDLL" "E:\Program Files\DevStudio\MyProjects\HPCPro\test9\test9.rc"" 
+Creating temporary file "C:\TEMP\RSP2F.tmp" with contents
+[
+/nologo /MC /W3 /GX- /O2 /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=211 /D "UNICODE" /D "_AFXDLL" /D "_MBCS" /Fp"WMIPSRel/test9.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE   /c 
+"E:\Program Files\DevStudio\MyProjects\HPCPro\test9\test9.cpp"
+"E:\Program Files\DevStudio\MyProjects\HPCPro\test9\MainFrm.cpp"
+"E:\Program Files\DevStudio\MyProjects\HPCPro\test9\test9Doc.cpp"
+"E:\Program Files\DevStudio\MyProjects\HPCPro\test9\test9View.cpp"
+]
+Creating command line "clmips.exe @C:\TEMP\RSP2F.tmp" 
+Creating temporary file "C:\TEMP\RSP30.tmp" with contents
+[
+/nologo /MC /W3 /GX- /O2 /D _WIN32_WCE=211 /D "H/PC Pro 2.11" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=211 /D "UNICODE" /D "_AFXDLL" /D "_MBCS" /Fp"WMIPSRel/test9.pch" /Yc"stdafx.h" /Fo"WMIPSRel/" /QMRWCE   /c 
+"E:\Program Files\DevStudio\MyProjects\HPCPro\test9\StdAfx.cpp"
+]
+Creating command line "clmips.exe @C:\TEMP\RSP30.tmp" 
+Creating temporary file "C:\TEMP\RSP31.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/test9.pdb" /machine:MIPS /out:"WMIPSRel/test9.exe" /subsystem:windowsce,2.11 /STACK:65536,4096 
+".\WMIPSRel\test9.obj"
+".\WMIPSRel\StdAfx.obj"
+".\WMIPSRel\MainFrm.obj"
+".\WMIPSRel\test9Doc.obj"
+".\WMIPSRel\test9View.obj"
+".\WMIPSRel\test9.res"
+]
+Creating command line "link.exe @C:\TEMP\RSP31.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+test9.cpp
+MainFrm.cpp
+test9Doc.cpp
+test9View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+test9.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

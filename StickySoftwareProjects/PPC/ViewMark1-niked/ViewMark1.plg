@@ -1,0 +1,52 @@
+--------------------Configuration: ViewMark1 - Win32 (WCE x86em) Release--------------------
+Begining build with project "C:\Program Files\DevStudio\MyProjects\PPC\ViewMark1\ViewMark1.dsp", at root.
+Active configuration is Win32 (WCE x86em) Application (based on Win32 (WCE x86em) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86em" with flags "/nologo /MT /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "STRICT" /D "_WIN32_WCE" /D "UNDER_NT" /D "_WIN32_WCE_EMULATION" /D "UNICODE" /D "_UNICODE" /D "_X86_" /Fo"ViewMar2/" /c "
+			"Win32 Resource Compiler" with flags "/l 0x809 /fo"x86emRel/plop.res" /d "_WIN32_WCE" /d "UNDER_NT" /d "_WIN32_WCE_EMULATION" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags ""
+			"Browser Database Maker" with flags "/nologo /o"ViewMar2/ViewMark1.bsc" "
+			"COFF Linker for 80x86em" with flags "/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /pdb:none /machine:I386 /out:"x86emRel/plop.exe" /windowsce:emulation "
+			"Empfile Utility" with flags "-NOSHELL -COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /fo"x86emRel/plop.res" /d "_WIN32_WCE" /d "UNDER_NT" /d "_WIN32_WCE_EMULATION" /d "UNICODE" /d "NDEBUG" "C:\Program Files\DevStudio\MyProjects\PPC\ViewMark1\ViewMark1.rc"" 
+Creating temp file "C:\TEMP\RSPED.tmp" with contents </nologo /entry:"wWinMainCRTStartup" /subsystem:windows /pdb:none /machine:I386 /out:"x86emRel/plop.exe" /windowsce:emulation 
+".\ViewMar2\CKeyDefineDialog.obj"
+".\ViewMar2\CNameRoutines.obj"
+".\ViewMar2\ConstRoutines.obj"
+".\ViewMar2\DrawSky.obj"
+".\ViewMar2\FindDialog.obj"
+".\ViewMar2\GotoAltAzDialog.obj"
+".\ViewMar2\GotoRaDecDialog.obj"
+".\ViewMar2\Jovian_Dialog.obj"
+".\ViewMar2\Key_Dialog.obj"
+".\ViewMar2\LocationDialog.obj"
+".\ViewMar2\MainFrm.obj"
+".\ViewMar2\MessRoutines.obj"
+".\ViewMar2\RegStuff.obj"
+".\ViewMar2\SettingsDialog.obj"
+"\devstudio\myprojects\StarRoutines.obj"
+".\ViewMar2\StarSums.obj"
+".\ViewMar2\StdAfx.obj"
+".\ViewMar2\TimeDateDialog.obj"
+".\ViewMar2\TimeStuff.obj"
+".\ViewMar2\Toolbox_Dialog.obj"
+".\ViewMar2\UpdateDialog2.obj"
+".\ViewMar2\ViewMark1.obj"
+".\ViewMar2\ViewMark1Doc.obj"
+".\ViewMar2\ViewMark1View.obj"
+".\x86emRel\plop.res">
+Creating command line "link.exe @C:\TEMP\RSPED.tmp" 
+Compiling resources...
+Linking...
+Creating command line "empfile.exe -NOSHELL -COPY  "C:\Program Files\DevStudio\MyProjects\PPC\ViewMark1\x86emRel\plop.exe" "WCE:PkUni.exe"" 
+
+Copying 'C:\Program Files\DevStudio\MyProjects\PPC\ViewMark1\x86emRel\plop.exe' from NT to 'PkUni.exe' on object store...Done.
+Copying 'C:\Program Files\DevStudio\MyProjects\PPC\ViewMark1\x86emRel\plop.exe' from NT to 'C:\Program Files\Windows CE Platform SDK\wce\emul\hpc\PkUni.exe' on NT...Done.
+
+
+
+plop.exe - 0 error(s), 0 warning(s)

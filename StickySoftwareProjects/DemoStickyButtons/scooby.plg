@@ -1,0 +1,49 @@
+--------------------Configuration: scooby - Win32 (WCE MIPS) Release--------------------
+Begining build with project "C:\devstudio\myprojects\DemoStickyButtons\scooby.dsp", at root.
+Active configuration is Win32 (WCE MIPS) Application (based on Win32 (WCE MIPS) Application)
+
+Project's tools are:
+			"C/C++ Compiler for Mips R4100" with flags "/nologo /MT /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "$(CEConfigName)" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /Fp"WMIPSRel/scooby.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE /c "
+			"Resource Compiler (RC)" with flags "/l 0x809 /r /fo"WMIPSRel/scooby.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "$(CEConfigName)" /d "UNICODE" /d "NDEBUG" "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Browser Database Maker" with flags "/nologo /o"WMIPSRel/scooby.bsc" "
+			"COFF Linker for Mips R4100" with flags "addrstor.lib /nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/DemoButtons.exe.pdb" /machine:MIPS /out:"WMIPSRel/DemoButtons.exe.MIPS" /subsystem:$(CESubsystem) "
+			"PFile Utility" with flags "COPY "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x809 /r /fo"WMIPSRel/scooby.res" /d "MIPS" /d "_MIPS_" /d UNDER_CE=200 /d _WIN32_WCE=200 /d "H/PC Ver. 2.00" /d "UNICODE" /d "NDEBUG" "C:\devstudio\myprojects\DemoStickyButtons\scooby.rc"" 
+Creating temp file "C:\TEMP\RSP8B.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /Fp"WMIPSRel/scooby.pch" /Yu"stdafx.h" /Fo"WMIPSRel/" /QMRWCE /c 
+"C:\devstudio\myprojects\DemoStickyButtons\MainFrm.cpp"
+"C:\devstudio\myprojects\DemoStickyButtons\scoobyDoc.cpp"
+"C:\devstudio\myprojects\DemoStickyButtons\scoobyView.cpp"
+"C:\devstudio\myprojects\DemoStickyButtons\scriptmaker.cpp"
+>
+Creating command line "clmips.exe @C:\TEMP\RSP8B.tmp" 
+Creating temp file "C:\TEMP\RSP8C.tmp" with contents </nologo /MT /W3 /O2 /D _WIN32_WCE=200 /D "H/PC Ver. 2.00" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=200 /D "UNICODE" /Fo"WMIPSRel/" /QMRWCE /c 
+"C:\devstudio\myprojects\DemoStickyButtons\scooby.cpp"
+>
+Creating command line "clmips.exe @C:\TEMP\RSP8C.tmp" 
+Creating temp file "C:\TEMP\RSP8D.tmp" with contents <addrstor.lib /nologo /entry:"wWinMainCRTStartup" /base:"0x00010000" /incremental:no /pdb:"WMIPSRel/DemoButtons.exe.pdb" /machine:MIPS /out:"WMIPSRel/DemoButtons.exe.MIPS" /subsystem:windowsce,2.0 
+.\WMIPSRel\MainFrm.obj
+.\WMIPSRel\scooby.obj
+.\WMIPSRel\scoobyDoc.obj
+.\WMIPSRel\scoobyView.obj
+.\WMIPSRel\scriptmaker.obj
+.\WMIPSRel\StdAfx.obj
+.\WMIPSRel\scooby.res>
+Creating command line "link.exe @C:\TEMP\RSP8D.tmp" 
+Compiling resources...
+Compiling...
+MainFrm.cpp
+scoobyDoc.cpp
+scoobyView.cpp
+scriptmaker.cpp
+Generating Code...
+Compiling...
+scooby.cpp
+Linking...
+
+
+
+DemoButtons.exe.MIPS - 0 error(s), 0 warning(s)

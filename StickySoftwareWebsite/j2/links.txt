@@ -1,0 +1,54 @@
+Main Jornada HP page
+http://www.hp.com/jornada/
+
+
+Jornada FAQ
+http://www.hp.com/jornada/getting_help/support/palmtops/800faq.html
+
+Official Jornada Accessories
+http://www.hp.com/jornada/palmtops/product_info/hp800_addons.html
+
+AccessPanel - Developer One
+www.developerone.com
+
+Grundle Software - RegCEEdit
+http://www.grundlesoftware.com/regeditce.htm
+HPC Pro Beta versions: http://www.grundlesoftware.com/beta.htm
+
+Illium Software - eWallet
+http://www.iliumsoft.com/
+
+Todd Ogasawara's Jornada Views
+http://www.to-tech.com/windowsce/jornada/index.html
+
+Infoworld's Jornada Review
+http://www.infoworld.com/cgi-bin/displayTC.pl?/reviews/981228jornada820.htm
+
+CE City's Review of the Jornada
+http://www.wincecity.com/special-reports/hp-jornada/
+
+
+CE City's HPC Pro Software Database
+http://www.wincecity.com/software-hpcpro.html
+
+Craig Peacock's HPC Pro (Jornada) Screenshots:
+http://www.craigtech.co.uk/hpcpro/images/index.html
+
+MobileChannels for Jornada
+http://computingcentral.msn.com/topics/windowsce/DBDetails.asp?DownloadID=46179
+
+
+
+Tested USB Peripherals
+
+MS Intellimouse V3.0 USB
+Kingstone
+
+
+Here's a tip. My Jornada was driving me nuts because I couldn't seem to multiple select items in the Inbox program. When I held down CTRL to select several items, nothing happened.
+
+I found that this didn't happen when using the USB mouse, and I then realised it was because I had turned on the setting "Disable touch pad when typing" in the "HP touch pad properties". I find this option totally essential by the way.
+
+To select multiple items with this option on, and using the touchpad, click on the first item as normal and then press CTRL. Instead of clicking on the second item, press the space bar. This seems to free up the pad motion, and you can now continue to hold down CTRL, move the cursor to the next item and click to select.
+
+John

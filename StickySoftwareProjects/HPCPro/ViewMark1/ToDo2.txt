@@ -1,0 +1,8 @@
+	typedef struct
+   {
+	int visualmag;
+	float ra;
+	float dec;
+   } fk5_entry;
+
+fk5_entry fk5stars[4652] = 

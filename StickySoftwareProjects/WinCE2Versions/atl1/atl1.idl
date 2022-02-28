@@ -1,0 +1,42 @@
+// atl1.idl : IDL source for atl1.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (atl1.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(385A1EE0-EDB2-11D2-B709-00A0C9B5E577),
+		dual,
+		helpstring("IPlop Interface"),
+		pointer_default(unique)
+	]
+	interface IPlop : IDispatch
+	{
+
+	HRESULT RefreshRate([in] long HScan, [out, retval] long *retval);
+	HRESULT GetVRes([out,retval] long *retval);
+	HRESULT GetHRes([out,retval] long *retval);
+	};
+
+[
+	uuid(385A1ED2-EDB2-11D2-B709-00A0C9B5E577),
+	version(1.0),
+	helpstring("atl1 1.0 Type Library")
+]
+library ATL1Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(385A1EE1-EDB2-11D2-B709-00A0C9B5E577),
+		helpstring("Plop Class")
+	]
+	coclass Plop
+	{
+		[default] interface IPlop;
+	};
+};
